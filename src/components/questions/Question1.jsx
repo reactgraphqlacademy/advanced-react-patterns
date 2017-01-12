@@ -19,7 +19,7 @@ const Question1 = (props) => (
     </div>
     <h3>Exercise 1</h3>
     <p>
-      Refactor the higher-order component withWidth so it accepts the sizes as a parameter. Use function composition
+      Refactor the higher-order component withWidth so it accepts the sizes as a parameter. <strong>Use function composition</strong>
       <code>
       &#123;
         largeWidth : 992,
