@@ -22,7 +22,7 @@ class RadioGroup extends React.Component {
       })
     ))
 
-    return <div>{children}</div>
+    return <div>{ children }</div>
   }
 }
 
