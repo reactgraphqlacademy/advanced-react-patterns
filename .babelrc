@@ -1,4 +1,4 @@
 {
-  "plugins": ["syntax-flow","transform-flow-strip-types", "react-hot-loader/babel"],
+  "plugins": ["react-hot-loader/babel"],
   "presets": ["es2015", "stage-0", "react"]
 }

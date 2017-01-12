@@ -1,7 +1,4 @@
 node_modules
-coverage/
-dist/
-reports/
-nyc_output/
+yarn.lock
 npm-debug.log
 .DS_Store

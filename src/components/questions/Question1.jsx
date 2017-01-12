@@ -14,7 +14,7 @@ const Question1 = (props) => (
     </p>
     <div>
       <pre className="alert alert-info" style={{ height: '100px' }}>
-        {JSON.stringify(props.mouse, null, 2)}
+        { JSON.stringify(props.mouse, null, 2) }
       </pre>
     </div>
     <h3>Exercise 1</h3>
@@ -29,7 +29,7 @@ const Question1 = (props) => (
       </code>
     </p>
     <p>
-      File of the exercise: patterns/HigherOrderComponents/exercise/withMousePosition.jsx
+      File of the exercise: patterns/HigherOrderComponents/exercise/withWidth.jsx
     </p>
   </div>
 )

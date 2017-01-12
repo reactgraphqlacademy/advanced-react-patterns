@@ -22,7 +22,7 @@ const Question3 = (props, { modal }) => (
     </p>
     <h3>Exercise 3</h3>
     <p>
-      Refactor the components in patterns/Context/exercise/* to pass the properties to child components using context
+      Refactor the components in patterns/Context/exercise/ to pass the properties to child components using context
     </p>
   </div>
 )

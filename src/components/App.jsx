@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import withWidth, {LARGE} from './patterns/HigherOrderComponents/exercise/WithWidth'
+import withWidth, { LARGE } from './patterns/HigherOrderComponents/exercise/withWidth'
 import Question1 from './questions/Question1'
 import Question2 from './questions/Question2'
 import Question3 from './questions/Question3'
@@ -20,7 +20,7 @@ class App extends React.Component {
 
   toggleMenu = () => {
     if (this.props.width !== LARGE) {
-      this.setState({menu : { open: !this.state.menu.open} })
+      this.setState({ menu : { open: !this.state.menu.open } })
     }
   }
 
@@ -40,23 +40,24 @@ class App extends React.Component {
       <Modal>
         <div id="page-wrap">
           <Menu
-             isOpen={isMenuOpen}
-             toggleMenu={this.toggleMenu}
+             isOpen={ isMenuOpen }
+             toggleMenu={ this.toggleMenu }
           >
-           <MenuItem link="#1" toggleMenu={this.toggleMenu}>Higher-Order Components</MenuItem>
-           <MenuItem link="#2" toggleMenu={this.toggleMenu}>Compound Components</MenuItem>
-           <MenuItem link="#3" toggleMenu={this.toggleMenu}>Context</MenuItem>
+           <MenuItem link="#1" toggleMenu={ this.toggleMenu }>Higher-Order Components</MenuItem>
+           <MenuItem link="#2" toggleMenu={ this.toggleMenu }>Compound Components</MenuItem>
+           <MenuItem link="#3" toggleMenu={ this.toggleMenu }>Context</MenuItem>
            <Accordion header="I'm an accordion">
-             <MenuItem link="#4" toggleMenu={this.toggleMenu}>Lorem ipsum</MenuItem>
+             <MenuItem link="#4" toggleMenu={ this.toggleMenu }>Lorem ipsum</MenuItem>
            </Accordion>
           </Menu>
-          <div style={styles} className="view-container">
+          <div style={ styles } className="view-container">
             <h1>Advanced React Patterns</h1>
             <Question1 />
             <hr />
             <Question2 />
             <hr />
             <Question3 />
+            <hr />
           </div>
        </div>
      </Modal>

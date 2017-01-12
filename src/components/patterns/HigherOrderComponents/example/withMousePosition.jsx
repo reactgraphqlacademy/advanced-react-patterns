@@ -16,8 +16,8 @@ const withMousePosition = Component => {
 
     render() {
       return (
-        <div onMouseMove={this.handleMouseMove}>
-          <Component {...this.props} mouse={this.state}/>
+        <div onMouseMove={ this.handleMouseMove }>
+          <Component { ...this.props } mouse={ this.state }/>
         </div>
       )
     }

@@ -1,12 +1,12 @@
-import React, {PropTypes} from 'react'
+import React, { PropTypes } from 'react'
 
-const RadioOption = ({onClick, isSelected, children}) => (
-  <div onClick={onClick}>
+const RadioOption = ({ onClick, isSelected, children }) => (
+  <div onClick={ onClick }>
     <span
-      className={isSelected? 'fa fa-circle': 'fa fa-circle-o'}
-      style={{paddingRight: '10px', cursor: 'pointer'}}
+      className={ isSelected? 'fa fa-circle': 'fa fa-circle-o' }
+      style={ {paddingRight: '10px', cursor: 'pointer'} }
     />
-    {children}
+    { children }
   </div>
 )
 

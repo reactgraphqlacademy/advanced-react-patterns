@@ -39,13 +39,13 @@ class Modal extends React.Component {
     return (
       <div>
         <BootstrapModal
-          backdrop={this.state.backdrop}
-          show={this.state.showModal}
-          onHide={this.closeModal}
+          backdrop={ this.state.backdrop }
+          show={ this.state.showModal }
+          onHide={ this.closeModal }
         >
-          {this.state.content}
+          { this.state.content }
         </BootstrapModal>
-        {this.props.children}
+        { this.props.children }
       </div>
     )
   }

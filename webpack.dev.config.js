@@ -1,11 +1,11 @@
 import webpack from 'webpack'
 import base from './webpack.base.config'
 
-base.devtool = 'source-map';
+base.devtool = 'source-map'
 base.entry = [
   'react-hot-loader/patch',
   'webpack-hot-middleware/client',
-].concat(base.entry);
+].concat(base.entry)
 
 base.plugins = base.plugins.concat([
   new webpack.optimize.OccurenceOrderPlugin(),
@@ -16,6 +16,6 @@ base.plugins = base.plugins.concat([
       NODE_ENV: "'development'"
     }
   })
-]);
+])
 
 module.exports = base

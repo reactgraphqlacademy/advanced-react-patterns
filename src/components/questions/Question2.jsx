@@ -12,7 +12,7 @@ const Question2 = (props) => (
       The following components are a compound component:
     </p>
     <p>
-      <em>Folder: patterns/HigherOrderComponents/exercise/withMousePosition.jsx</em>
+      <em>Folder: patterns/CompoundComponents/example/RadioGroup.jsx and RadioOption.jsx</em>
     </p>
     <div>
     <p>What is a compound component?</p>
@@ -29,7 +29,7 @@ const Question2 = (props) => (
     </div>
     <h3>Exercise 2</h3>
     <p>
-      Refactor the components in patterns/CompoundComponents/exercise/* so we don't have to pass explicitly the toggleMenu property on every MenuItem.
+      Refactor the components in patterns/CompoundComponents/exercise/ so we don't have to pass explicitly the toggleMenu property on every MenuItem.
     </p>
     <p>Good: &lt;MenuItem link="#1"&gt;Higher-Order Components&lt;/MenuItem&gt;</p>
     <p>Not good: 	&lt;MenuItem link="#1" toggleMenu=&#123; this.toggleMenu &#125;&lt;Higher-Order Components&gt;/MenuItem></p>

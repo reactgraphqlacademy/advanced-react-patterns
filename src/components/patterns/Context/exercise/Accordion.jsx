@@ -4,10 +4,10 @@ const Accordion = (props) => (
   <div>
     <hr />
     <p>
-      {props.header}
+      { props.header }
       <i className="fa fa-arrow-circle-o-down pull-right"></i>
     </p>
-    {props.children}
+    { props.children }
   </div>
 )
 

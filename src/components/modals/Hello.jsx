@@ -9,12 +9,12 @@ const Hello = (props, { modal }) => (
       </BootstrapModal.Title>
     </BootstrapModal.Header>
     <BootstrapModal.Body>
-      {props.children}
+      { props.children }
     </BootstrapModal.Body>
     <BootstrapModal.Footer className="text-center">
       <Button
         type="button"
-        onClick={modal.hideModal}
+        onClick={ modal.hideModal }
       >
         Close
       </Button>
