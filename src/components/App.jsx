@@ -54,7 +54,7 @@ class App extends React.Component {
              <img className="img-responsive" src="/public/discount-code.png" />
            </a>
            <p className="text-center">
-             Just 10 discounts available with this voucher!
+             Just 10 discounts of <strong>25%</strong> available with this voucher!
            </p>
            <a className="text-center" style={{paddingBottom: '10px'}} href="https://reactjs.academy/react-redux-training-london" target="_blank">
               <strong>welovejavascriptlondon25</strong>
