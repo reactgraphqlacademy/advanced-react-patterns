@@ -49,6 +49,20 @@ class App extends React.Component {
            <Accordion header="I'm an accordion">
              <MenuItem link="#4" toggleMenu={ this.toggleMenu }>Lorem ipsum</MenuItem>
            </Accordion>
+           <hr />
+           <a href="https://reactjs.academy/react-redux-training-london" target="_blank">
+             <img className="img-responsive" src="/public/discount-code.png" />
+           </a>
+           <p className="text-center">
+             Just 10 discounts available with this voucher!
+           </p>
+           <a className="text-center" style={{paddingBottom: '10px'}} href="https://reactjs.academy/react-redux-training-london" target="_blank">
+              <strong>welovejavascriptlondon25</strong>
+           </a>
+
+           <a className="text-center" href="https://reactjs.academy/react-redux-training-london" target="_blank">
+             ReactJS Academy
+           </a>
           </Menu>
           <div style={ styles } className="view-container">
             <h1>Advanced React Patterns</h1>

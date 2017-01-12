@@ -24,6 +24,9 @@ const Question3 = (props, { modal }) => (
     <p>
       Refactor the components in patterns/Context/exercise/ to pass the properties to child components using context
     </p>
+    <div className="alert alert-warning fade in">
+      <strong>Warning!</strong> You don't have to implement the Accordion component. The goal is the Accordion component doesn't have to know the toggleMenu function exists
+    </div>
   </div>
 )
 
