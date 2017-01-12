@@ -18,7 +18,7 @@ const Question2 = (props) => (
     <p>What is a compound component?</p>
     <RadioGroup
       defaultValue="fm"
-      onChange={(radioValue) => {console.log('radioValue', radioValue)}}
+      onChange={ (radioValue) => { console.log('radioValue', radioValue) } }
     >
       <RadioOption value="1">A component that returns another component</RadioOption>
       <RadioOption value="2">A function that returns a component</RadioOption>
