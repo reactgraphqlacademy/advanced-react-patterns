@@ -1,7 +1,11 @@
 Advanced React Patterns
 =========================
 
-This is an exercise to help you learn Advanced React Patterns.
+This repo contains some exercises to help you will learn the following Advanced React Patterns:
+
+- Higher-Order Components (HoCs)
+- Compound Components
+- Context
 
 ## How to install
 
