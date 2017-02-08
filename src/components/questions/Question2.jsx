@@ -1,8 +1,7 @@
 import React from 'react'
 import Example from '../patterns/RenderCallback/example'
-import Exercise from '../patterns/RenderCallback/exercise/GitHubIssueSearchInfiniteScroller'
-// import Exercise from '../patterns/RenderCallback/exercise/'
-// import Exercise from '../patterns/RenderCallback/solution/'
+//import Exercise from '../patterns/RenderCallback/exercise/GitHubIssueSearchInfiniteScroller'
+import Exercise from '../patterns/RenderCallback/exercise/'
 
 const Question2 = (props) => (
   <div>
