@@ -45,11 +45,10 @@ class App extends React.Component {
              toggleMenu={ this.toggleMenu }
           >
            <MenuItem link="#1" toggleMenu={ this.toggleMenu }>Higher-Order Components</MenuItem>
-           <MenuItem link="#2" toggleMenu={ this.toggleMenu }>Compound Components</MenuItem>
-           <MenuItem link="#3" toggleMenu={ this.toggleMenu }>Context</MenuItem>
-           <MenuItem link="#4" toggleMenu={ this.toggleMenu }>Render Callback</MenuItem>
-           <Accordion header="I'm an accordion">
-             <MenuItem link="#4" toggleMenu={ this.toggleMenu }>Lorem ipsum</MenuItem>
+           <MenuItem link="#2" toggleMenu={ this.toggleMenu }>Render Callback</MenuItem>
+           <MenuItem link="#3" toggleMenu={ this.toggleMenu }>Compound Components</MenuItem>
+            <Accordion header="I'm an accordion">
+              <MenuItem link="#4" toggleMenu={ this.toggleMenu }>Context</MenuItem>
            </Accordion>
           </Menu>
           <div style={ styles } className="view-container">
