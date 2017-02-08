@@ -4,8 +4,8 @@ import withMousePosition from '../patterns/HigherOrderComponents/example/withMou
 const Question1 = (props) => (
   <div>
     <a name="1"></a>
-    <h2>Higher-Order Components</h2>
-    <h3>Example 1</h3>
+    <h2>1. Higher-Order Components</h2>
+    <h3>Example</h3>
     <p>
       The following component is a higher-order component called withMousePosition, it prints the position of the mouse when you move the mouse over the component.
     </p>
@@ -17,7 +17,7 @@ const Question1 = (props) => (
         { JSON.stringify(props.mouse, null, 2) }
       </pre>
     </div>
-    <h3>Exercise 1</h3>
+    <h3>Exercise</h3>
     <p>
       Refactor the higher-order component withWidth so it accepts the sizes as a parameter. <strong>Use function composition</strong>
       <code>
@@ -31,6 +31,7 @@ const Question1 = (props) => (
     <p>
       File of the exercise: patterns/HigherOrderComponents/exercise/withWidth.jsx
     </p>
+    <hr />
   </div>
 )
 

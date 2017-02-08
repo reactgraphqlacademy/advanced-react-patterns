@@ -86,3 +86,21 @@
 .bm-burger-button {
   display: none;
 }
+
+.scroll-notifier {
+  overflow-y: auto;
+  overflow-x: hidden;
+  border: solid 1px;
+}
+
+.issue-list {
+  padding: 0;
+  margin: 0;
+}
+
+.issue-list li {
+  display: block;
+  text-decoration: none;
+  border-top: '1px solid #aaa';
+  padding: 10;
+}

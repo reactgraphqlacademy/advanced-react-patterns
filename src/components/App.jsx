@@ -4,6 +4,7 @@ import withWidth, { LARGE } from './patterns/HigherOrderComponents/exercise/with
 import Question1 from './questions/Question1'
 import Question2 from './questions/Question2'
 import Question3 from './questions/Question3'
+import Question4 from './questions/Question4'
 import MenuItem from './patterns/CompoundComponents/exercise/MenuItem'
 import Menu from './patterns/CompoundComponents/exercise/Menu'
 import Accordion from './patterns/Context/exercise/Accordion'
@@ -46,32 +47,17 @@ class App extends React.Component {
            <MenuItem link="#1" toggleMenu={ this.toggleMenu }>Higher-Order Components</MenuItem>
            <MenuItem link="#2" toggleMenu={ this.toggleMenu }>Compound Components</MenuItem>
            <MenuItem link="#3" toggleMenu={ this.toggleMenu }>Context</MenuItem>
+           <MenuItem link="#4" toggleMenu={ this.toggleMenu }>Render Callback</MenuItem>
            <Accordion header="I'm an accordion">
              <MenuItem link="#4" toggleMenu={ this.toggleMenu }>Lorem ipsum</MenuItem>
            </Accordion>
-           <hr />
-           <a href="https://reactjs.academy/react-redux-training-london" target="_blank">
-             <img className="img-responsive" src="/public/discount-code.png" />
-           </a>
-           <p className="text-center">
-             Just 10 discounts of <strong>25%</strong> available with this voucher!
-           </p>
-           <a className="text-center" style={{paddingBottom: '10px'}} href="https://reactjs.academy/react-redux-training-london" target="_blank">
-              <strong>welovejavascriptlondon25</strong>
-           </a>
-
-           <a className="text-center" href="https://reactjs.academy/react-redux-training-london" target="_blank">
-             ReactJS Academy
-           </a>
           </Menu>
           <div style={ styles } className="view-container">
             <h1>Advanced React Patterns</h1>
             <Question1 />
-            <hr />
             <Question2 />
-            <hr />
             <Question3 />
-            <hr />
+            <Question4 />
           </div>
        </div>
      </Modal>

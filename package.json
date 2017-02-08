@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/reactjs-academy/advanced-react-patterns#readme",
   "dependencies": {
+    "jsonp": "^0.2.1",
     "material-ui": "^0.16.6",
     "react": "^15.4.1",
     "react-bootstrap": "^0.30.7",
