@@ -31,7 +31,7 @@ class Measure extends React.Component {
     const { width, height } = this.state
 
     return (
-      <div ref={ ref => this.wrapper = ref }>
+      <div style={{ display: 'block' }} ref={ ref => this.wrapper = ref }>
         { this.props.children(width, height) }
       </div>
     );
