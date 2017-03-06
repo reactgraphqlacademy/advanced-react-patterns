@@ -58,6 +58,10 @@
   font-size: 1.15em;
 }
 
+.bm-menu h3{ 
+  margin-top: 0;
+}
+
 #outer-container {
   position:relative;
 }

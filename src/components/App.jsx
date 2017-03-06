@@ -44,12 +44,29 @@ class App extends React.Component {
              isOpen={ isMenuOpen }
              toggleMenu={ this.toggleMenu }
           >
-           <MenuItem link="#1" toggleMenu={ this.toggleMenu }>Higher-Order Components</MenuItem>
-           <MenuItem link="#2" toggleMenu={ this.toggleMenu }>Render Callback</MenuItem>
-           <MenuItem link="#3" toggleMenu={ this.toggleMenu }>Compound Components</MenuItem>
-            <Accordion header="I'm an accordion">
-              <MenuItem link="#4" toggleMenu={ this.toggleMenu }>Context</MenuItem>
+          <p className="text-center">
+            <a target="_blank" href="https://reactjs.academy/react-redux-training-paris">
+              <img src="/public/logo.png" />
+              <br />
+              ReactJS.Academy
+            </a>
+          </p>
+          <span className="text-center">voucher</span>
+          <h3 className="text-center">
+            <a target="_blank" href="https://reactjs.academy/react-redux-training-paris">parislovesreact</a>
+          </h3>
+          <hr />
+           <MenuItem link="#1" toggleMenu={ this.toggleMenu }>1. Higher-Order Components</MenuItem>
+           <MenuItem link="#2" toggleMenu={ this.toggleMenu }>2. Render Callback</MenuItem>
+           <MenuItem link="#3" toggleMenu={ this.toggleMenu }>3. Compound Components</MenuItem>
+           <Accordion header="I'm an accordion">
+              <MenuItem link="#4" toggleMenu={ this.toggleMenu }>4. Context</MenuItem>
            </Accordion>
+           <hr />
+           <p className="text-center">ReactJS Academy voucher:</p>
+           <h3 className="text-center">
+             <a target="_blank" href="https://reactjs.academy/react-redux-training-paris">parislovesreact</a>
+           </h3>
           </Menu>
           <div style={ styles } className="view-container">
             <h1>Advanced React Patterns</h1>
