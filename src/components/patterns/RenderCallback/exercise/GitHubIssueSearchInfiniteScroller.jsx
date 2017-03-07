@@ -2,7 +2,7 @@ import React from 'react'
 import withGitHubIssueSearch from './utils/withGitHubIssueSearch'
 import ScrollNotifier from './utils/ScrollNotifier'
 
-const GitHubIssueSearcher = ({ issues, fetchNextPage, isFetching }) => (
+const IssueInfiniteScroller = ({ issues, fetchNextPage, isFetching }) => (
   <ScrollNotifier
     style={{ height: 400 }}
     onScrollAtTheBottom={ fetchNextPage }
@@ -24,4 +24,4 @@ const GitHubIssueSearcher = ({ issues, fetchNextPage, isFetching }) => (
   </ScrollNotifier>
 )
 
-export default withGitHubIssueSearch(GitHubIssueSearcher)
+export default withGitHubIssueSearch(IssueInfiniteScroller)

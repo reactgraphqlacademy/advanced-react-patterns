@@ -12,6 +12,7 @@ const Question2 = (props) => (
     <div>
     </div>
     <h3>Exercise</h3>
+    Refactor the HoCs GitHubIssueSearchInfiniteScroller to be a Render Callback
     <Exercise />
     <hr />
   </div>
