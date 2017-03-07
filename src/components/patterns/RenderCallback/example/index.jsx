@@ -19,7 +19,7 @@ const Example = () => (
               style={{width}} src="/public/dog.jpg"
             />
             <figcaption>
-              My width is {width}px, and my height is {height}px
+              My width is {width}px
             </figcaption>
           </figure>
         )}
