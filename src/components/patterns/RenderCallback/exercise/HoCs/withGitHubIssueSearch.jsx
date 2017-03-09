@@ -1,6 +1,6 @@
 import React from 'react'
-import searchGitHubIssues from './searchGitHubIssues'
-import { GITHUB_ISSUES_API_URL } from './config'
+import searchGitHubIssues from '../utils/searchGitHubIssues'
+import { GITHUB_ISSUES_API_URL } from '../utils/config'
 
 const withGitHubIssueSearch = MyComponent => (
   class ComponentWithGitHubIssueSearch extends React.Component {

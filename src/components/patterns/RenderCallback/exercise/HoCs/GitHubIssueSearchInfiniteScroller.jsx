@@ -1,6 +1,6 @@
 import React from 'react'
-import withGitHubIssueSearch from './utils/withGitHubIssueSearch'
-import ScrollNotifier from './utils/ScrollNotifier'
+import withGitHubIssueSearch from './withGitHubIssueSearch'
+import ScrollNotifier from '../ScrollNotifier'
 
 const IssueInfiniteScroller = ({ issues, fetchNextPage, isFetching }) => (
   <ScrollNotifier
