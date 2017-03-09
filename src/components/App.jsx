@@ -58,6 +58,15 @@ class App extends React.Component {
            <Accordion header="I'm an accordion">
               <MenuItem link="#4" toggleMenu={ this.toggleMenu }>4. Context</MenuItem>
            </Accordion>
+           <hr />
+           <ul className="list-unstyled">
+             <li>
+                 <a target="_blank" href="https://twitter.com/reactjsacademy" className="btn-social btn-outline"><i className="fa fa-fw fa-twitter"></i> @reactjsacademy</a>
+             </li>
+             <li>
+                 <a target="_blank" href="https://www.instagram.com/reactjsacademy/" className="btn-social btn-outline"><i className="fa fa-fw fa-instagram"></i> @reactjsacademy</a>
+             </li>
+           </ul>
           </Menu>
           <div style={ styles } className="view-container">
             <h1>Advanced React Patterns</h1>
