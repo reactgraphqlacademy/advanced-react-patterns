@@ -9,8 +9,6 @@ import MenuItem from './patterns/CompoundComponents/exercise/MenuItem'
 import Menu from './patterns/CompoundComponents/exercise/Menu'
 import Accordion from './patterns/Context/exercise/Accordion'
 import Modal from './patterns/Context/example/Modal'
-import TopVoucher from './vouchers/TopVoucher'
-import BottomVoucher from './vouchers/BottomVoucher'
 import '../assets/main.css'
 
 class App extends React.Component {
@@ -46,14 +44,20 @@ class App extends React.Component {
              isOpen={ isMenuOpen }
              toggleMenu={ this.toggleMenu }
           >
-           <TopVoucher />
+           <p className="text-center">
+             <a target="_blank" href="https://reactjs.academy/react-redux-training-berlin">
+               <img src="/public/logo.png" />
+               <br />
+               ReactJS.Academy
+             </a>
+           </p>
+           <hr />
            <MenuItem link="#1" toggleMenu={ this.toggleMenu }>1. Higher-Order Components</MenuItem>
            <MenuItem link="#2" toggleMenu={ this.toggleMenu }>2. Render Callback</MenuItem>
            <MenuItem link="#3" toggleMenu={ this.toggleMenu }>3. Compound Components</MenuItem>
            <Accordion header="I'm an accordion">
               <MenuItem link="#4" toggleMenu={ this.toggleMenu }>4. Context</MenuItem>
            </Accordion>
-           <BottomVoucher />
           </Menu>
           <div style={ styles } className="view-container">
             <h1>Advanced React Patterns</h1>
