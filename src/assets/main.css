@@ -58,7 +58,7 @@
   font-size: 1.15em;
 }
 
-.bm-menu h3{ 
+.bm-menu h3{
   margin-top: 0;
 }
 
@@ -107,4 +107,8 @@
   text-decoration: none;
   border-top: '1px solid #aaa';
   padding: 10;
+}
+
+a {
+  cursor: pointer;
 }
