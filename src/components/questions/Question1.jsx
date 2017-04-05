@@ -31,7 +31,7 @@ const Question1 = (props, context) => (
       Navigate to the <a onClick={() => { context.router.history.push("/hello") }}>hello page</a> to test the router.
     </p>
     <p>
-      File of the exercise: patterns/HigherOrderComponents/exercise/withWidth.jsx
+      File of the exercise: patterns/HigherOrderComponents/exercise/withRouter.jsx
     </p>
     <h3>Exercise withWidth</h3>
     <p>
