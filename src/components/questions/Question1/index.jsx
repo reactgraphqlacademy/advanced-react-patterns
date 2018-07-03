@@ -84,9 +84,6 @@ const Question1 = (props) => (
       </li>
     </ul>
     <p>
-      File of the exercise: patterns/HigherOrderComponents/exercise/withWidth.jsx
-    </p>
-    <p>
       Tip. What you are trying to implement is similar to the <code>connect</code> function from <code>react-redux</code>.
     </p>
     <div className="alert alert-warning">
