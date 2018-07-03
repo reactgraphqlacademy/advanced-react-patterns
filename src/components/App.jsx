@@ -5,8 +5,10 @@ import Question1 from './questions/Question1'
 import Question2 from './questions/Question2'
 import Question3 from './questions/Question3'
 import Question4 from './questions/Question4'
-import MenuItem from './patterns/CompoundComponents/exercise/MenuItem'
-import Menu from './patterns/CompoundComponents/exercise/Menu'
+// import MenuItem from './patterns/CompoundComponents/exercise/MenuItem'
+import MenuItem from './patterns/Context/exercise/MenuItem'
+// import Menu from './patterns/CompoundComponents/exercise/Menu'
+import Menu from './patterns/Context/exercise/Menu'
 import Accordion from './patterns/Context/exercise/Accordion'
 import Modal from './patterns/Context/example/Modal'
 
@@ -32,6 +34,7 @@ class App extends React.Component {
 
   render() {
     let isMenuOpen = this.state.menu.open
+    const { toggleMenu } = this
     const styles = {
       paddingRight: '20px',
       paddingLeft: '20px'
@@ -58,11 +61,11 @@ class App extends React.Component {
                </a>
              </p>
              <hr />
-             <MenuItem link="/" toggleMenu={ this.toggleMenu }>1. Higher-Order Components</MenuItem>
-             <MenuItem link="q2" toggleMenu={ this.toggleMenu }>2. Render Callback</MenuItem>
-             <MenuItem link="q3" toggleMenu={ this.toggleMenu }>3. Compound Components</MenuItem>
+             <MenuItem link="/">1. Higher-Order Components</MenuItem>
+             <MenuItem link="q2">2. Render Callback</MenuItem>
+             <MenuItem link="q3">3. Compound Components</MenuItem>
              <Accordion header="I'm an accordion">
-                <MenuItem link="q4" toggleMenu={ this.toggleMenu }>4. Context</MenuItem>
+                <MenuItem link="q4">4. Context</MenuItem>
              </Accordion>
              <hr />
              <ul className="list-unstyled">
