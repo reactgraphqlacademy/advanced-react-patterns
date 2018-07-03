@@ -6,14 +6,14 @@ import Exercise from '../patterns/RenderCallback/exercise/BadImplementation'
 const Question2 = (props) => (
   <div>
     <h2>
-      Render Callback
+      Render Props
     </h2>
     <h3>Example</h3>
     <Example />
     <div>
     </div>
     <h3>Exercise</h3>
-    Refactor the HoCs GitHubIssueSearchInfiniteScroller to be a Render Callback
+    Refactor the HoCs GitHubIssueSearchInfiniteScroller to be a Render Props
     <Exercise />
     <hr />
   </div>

@@ -59,7 +59,7 @@ class App extends React.Component {
              </p>
              <hr />
              <MenuItem link="/" toggleMenu={ this.toggleMenu }>1. Higher-Order Components</MenuItem>
-             <MenuItem link="q2" toggleMenu={ this.toggleMenu }>2. Render Callback</MenuItem>
+             <MenuItem link="q2" toggleMenu={ this.toggleMenu }>2. Render Props</MenuItem>
              <MenuItem link="q3" toggleMenu={ this.toggleMenu }>3. Compound Components</MenuItem>
              <Accordion header="I'm an accordion">
                 <MenuItem link="q4" toggleMenu={ this.toggleMenu }>4. Context</MenuItem>

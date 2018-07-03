@@ -5,7 +5,7 @@ const Example = () => (
   <div className="row">
     <div className="col-sm-6">
       <p>
-        The following component is a "render callback" component called Measure. It provides the width and the height of the wrapper component.
+        The following component is a "Render Props" component called Measure. It provides the width and the height of the wrapper component.
       </p>
       <p>
         <em>File: patterns/RenderCallback/example/Measure.jsx</em>
