@@ -16,7 +16,8 @@ const Example = () => (
         {(width, height) => (
           <figure>
             <img
-              style={{width}} src="/public/dog.jpg"
+              alt="dog"
+              style={{width}} src="/dog.jpg"
             />
             <figcaption>
               My width is {width}px

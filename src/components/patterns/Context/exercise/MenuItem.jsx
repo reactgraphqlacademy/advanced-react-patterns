@@ -1,10 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const MenuItem = ({ children, toggleMenu, link }) => (
   <p>
-    <a style={{ cursor: 'pointer' }} onClick={ () => toggleMenu() }>
+    <Link to={link} onClick={ () => toggleMenu() }>
       { children }
-    </a>
+    </Link>
   </p>
 )
 

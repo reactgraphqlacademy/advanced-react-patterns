@@ -1,62 +1,52 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Modal as BootstrapModal } from 'react-bootstrap'
+
+export const ModalContext = React.createContext()
 
 class Modal extends React.Component {
   constructor () {
     super()
 
     this.state = {
-      showModal: false,
+      isOpen: false,
       content: null,
       backdrop: true
-    }
-  }
-
-  getChildContext () {
-    const {showModal, hideModal} = this
-
-    return {
-      modal: {
-        showModal,
-        hideModal
-      }
     }
   }
 
   showModal = (content, backdrop = true) => {
     this.setState({
       content,
-      showModal: true,
+      isOpen: true,
       backdrop
     })
   }
 
   hideModal = () => {
-    this.setState({ showModal: false })
+    this.setState({ isOpen: false })
   }
 
   render () {
+    const { showModal, hideModal, state, props } = this
+
     return (
-      <div>
+      <ModalContext.Provider value={{ ...state, showModal, hideModal }}>
         <BootstrapModal
-          backdrop={ this.state.backdrop }
-          show={ this.state.showModal }
-          onHide={ this.closeModal }
+          backdrop={ state.backdrop }
+          show={ state.isOpen }
+          onHide={ hideModal }
         >
-          { this.state.content }
+          { state.content }
         </BootstrapModal>
-        { this.props.children }
-      </div>
+        { props.children }
+      </ModalContext.Provider>
     )
   }
 }
 
 Modal.propTypes = {
-  children: React.PropTypes.object
-}
-
-Modal.childContextTypes = {
-  modal: React.PropTypes.object
+  children: PropTypes.object
 }
 
 export default Modal

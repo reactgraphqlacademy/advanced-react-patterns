@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const ScrollNotifier = ({ buffer, onScrollAtTheBottom, style, children }) => {
   const handleScroll = event => {
@@ -21,9 +22,9 @@ const ScrollNotifier = ({ buffer, onScrollAtTheBottom, style, children }) => {
 }
 
 ScrollNotifier.propTypes = {
-  buffer: React.PropTypes.number.isRequired,
-  onScrollAtTheBottom: React.PropTypes.func
-},
+  buffer: PropTypes.number.isRequired,
+  onScrollAtTheBottom: PropTypes.func
+}
 
 ScrollNotifier.defaultProps = {
   buffer: 300

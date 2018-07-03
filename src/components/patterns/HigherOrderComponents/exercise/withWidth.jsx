@@ -6,8 +6,7 @@ export const LARGE = 3
 
 const withWidth = (MyComponent) => {
   const largeWidth = 992,
-        mediumWidth = 768,
-        resizeInterval = 166
+        mediumWidth = 768
 
   return class WithWidth extends Component {
     constructor() {

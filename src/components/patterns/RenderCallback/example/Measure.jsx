@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from 'prop-types'
 
 class Measure extends React.Component {
   constructor() {
@@ -39,7 +40,7 @@ class Measure extends React.Component {
 }
 
 Measure.propTypes = {
-  children: React.PropTypes.func.isRequired
+  children: PropTypes.func.isRequired
 }
 
 export default Measure

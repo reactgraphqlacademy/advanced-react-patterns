@@ -1,7 +1,8 @@
 import React from 'react'
 import { Modal as BootstrapModal, Button } from 'react-bootstrap'
+import { ModalContext } from '../patterns/Context/example/Modal'
 
-const Hello = (props, { modal }) => (
+const Hello = (props) => (
   <div>
     <BootstrapModal.Header>
       <BootstrapModal.Title id="contained-modal-title">
@@ -12,18 +13,18 @@ const Hello = (props, { modal }) => (
       { props.children }
     </BootstrapModal.Body>
     <BootstrapModal.Footer className="text-center">
-      <Button
-        type="button"
-        onClick={ modal.hideModal }
-      >
-        Close
-      </Button>
+      <ModalContext.Consumer>
+        {({ hideModal }) => (
+          <Button
+            type="button"
+            onClick={ hideModal }
+          >
+            Close
+          </Button>
+        )}
+      </ModalContext.Consumer>
     </BootstrapModal.Footer>
   </div>
 )
-
-Hello.contextTypes = {
-  modal: React.PropTypes.object.isRequired
-}
 
 export default Hello

@@ -2,20 +2,26 @@ import React from 'react'
 import { Button } from 'react-bootstrap'
 
 import Hello from '../modals/Hello'
+import { ModalContext } from '../patterns/Context/example/Modal'
 
-const Question4 = (props, { modal }) => (
+const Question4 = (props) => (
   <div>
-    <a name="4"></a>
-    <h2>4. Context</h2>
+    <h2>
+      Context
+    </h2>
     <h3>Example</h3>
     <p>
       The following component is using context:
-      <Button
-        onClick={() => { modal.showModal(<Hello>Hi there!</Hello>) }}
-        bsStyle="info"
-      >
-        Show modal
-      </Button>
+      <ModalContext.Consumer>
+        {({ showModal }) => (
+          <Button
+            onClick={() => { showModal(<Hello>Hi there!</Hello>) }}
+            bsStyle="info"
+          >
+            Show modal
+          </Button>
+        )}
+      </ModalContext.Consumer>
     </p>
     <p>
       <em>Folder: patterns/Context/example/Modal.jsx</em>
@@ -29,9 +35,5 @@ const Question4 = (props, { modal }) => (
     </div>
   </div>
 )
-
-Question4.contextTypes = {
-  modal: React.PropTypes.object
-}
 
 export default Question4

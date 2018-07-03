@@ -5,8 +5,9 @@ import Exercise from '../patterns/RenderCallback/exercise/BadImplementation'
 
 const Question2 = (props) => (
   <div>
-    <a name="2"></a>
-    <h2>2. Render Callback</h2>
+    <h2>
+      Render Callback
+    </h2>
     <h3>Example</h3>
     <Example />
     <div>

@@ -5,8 +5,9 @@ import RadioOption from '../patterns/CompoundComponents/example/RadioOption'
 
 const Question3 = (props) => (
   <div>
-    <a name="3"></a>
-    <h2>3. Compound Components</h2>
+    <h2>
+      Compound Components
+    </h2>
     <h3>Example</h3>
     <p>
       The following components are a compound component:
