@@ -18,6 +18,7 @@ export const connect = () => {
         }
 
         render() {
+            // TODO: implement the render method
             return null
         }
     }
