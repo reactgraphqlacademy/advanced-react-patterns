@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap'
 
 import { ModalContext } from '../patterns/Context/example/Modal'
 
-const Question4 = (props) => (
+const Question4 = () => (
   <div>
     <h2>
       Context
@@ -24,15 +24,20 @@ const Question4 = (props) => (
       </ModalContext.Consumer>
     </p>
     <p>
-      <em>Folder: patterns/Context/example/Modal.jsx</em>
+      <em>Folder: src/components/patterns/Context/example/Modal.jsx</em>
     </p>
     <h3>Exercise</h3>
     <p>
-      Refactor the components in patterns/Context/exercise/ to pass the properties to child components using context
+      Refactor the components in src/components/patterns/Context/exercise/ to pass the properties to child components using context
     </p>
     <div className="alert alert-warning fade in">
       <strong>Warning!</strong> You don't have to implement the Accordion component. The goal is the Accordion component doesn't have to know the toggleMenu function exists
     </div>
+    <hr />
+    <h3>Bonus Exercise</h3>
+    <p>
+      Implement the Redux Provider in src/components/patterns/Context/xbonus/Provider.js. Once implemented, use it the Root.js
+    </p>
   </div>
 )
 
