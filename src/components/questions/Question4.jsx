@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
 
-import Hello from '../modals/Hello'
+
 import { ModalContext } from '../patterns/Context/example/Modal'
 
 const Question4 = (props) => (
@@ -15,7 +15,7 @@ const Question4 = (props) => (
       <ModalContext.Consumer>
         {({ showModal }) => (
           <Button
-            onClick={() => { showModal(<Hello>Hi there!</Hello>) }}
+            onClick={() => { showModal(<h1>Hi there!</h1>) }}
             bsStyle="info"
           >
             Show modal

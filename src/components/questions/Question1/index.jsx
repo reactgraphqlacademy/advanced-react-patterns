@@ -1,9 +1,10 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import withMousePosition from '../../patterns/HigherOrderComponents/example/withMousePosition'
 import List from './List'
+import { connect } from '../../patterns/HigherOrderComponents/xbonus/connect'
+import { incrementAction, decrementAction } from '../../utils/redux-counter'
 
-const Question1 = (props) => (
+const Question1 = ({ dispatch, ...props }) => (
   <div>
     <h2>
       Higher-Order Components
@@ -17,7 +18,7 @@ const Question1 = (props) => (
     </p>
     <div>
       <pre className="alert alert-info" style={{ height: '100px' }}>
-        { JSON.stringify(props.mouse, null, 2) }
+        {JSON.stringify(props.mouse, null, 2)}
       </pre>
     </div>
     <h3>Exercise withData</h3>
@@ -60,11 +61,11 @@ const Question1 = (props) => (
         </p>
         <p>
           <code>
-          withWidth(compnent, &#123;
-            largeWidth : 992,
-            mediumWidth : 768,
-            resizeInterval : 166
-          &#125;
+            withWidth(compnent, &#123;
+              largeWidth : 992,
+              mediumWidth : 768,
+              resizeInterval : 166
+            &#125;
           </code>)
         </p>
       </li>
@@ -74,11 +75,11 @@ const Question1 = (props) => (
         </p>
         <p>
           <code>
-          withWidth(&#123;
-            largeWidth : 992,
-            mediumWidth : 768,
-            resizeInterval : 166
-          &#125;)(component)
+            withWidth(&#123;
+              largeWidth : 992,
+              mediumWidth : 768,
+              resizeInterval : 166
+            &#125;)(component)
         </code>
         </p>
       </li>
@@ -90,18 +91,25 @@ const Question1 = (props) => (
       <h4>Heads-up</h4>
       <p>There is more than one place where the HoC withWidth is being used. You'll need to update any call to withWidth using the new implemention</p>
     </div>
-    <div className="alert alert-info">
-      <h4>Bonus exercise</h4>
-      <p>
-        Thanks to the curried implementation, you could call the first part of the curried function once in the app, the one that accepts the configuration parameter. Then the second part of the curried function, the one that accepts the component, can be called in different parts of the app for each specific component.
-      </p>
-    </div>
     <hr />
+    <h3>Bonus exercise</h3>
+    <p>Implement the connect from react-redux. Look at the comments in src/components/patterns/HigherOrderComponents/xbonus/connect.js</p>
+    <p>
+      <button onClick={() => dispatch && dispatch(incrementAction())}>Increment</button>
+      <strong style={{ padding: '0 10px' }}>{props.counter}</strong>
+      <button onClick={() => dispatch && dispatch(decrementAction())}>Decrement</button>
+    </p>
   </div>
 )
 
-Question1.contextTypes = {
-  router: PropTypes.object
-}
+const mapStateToProps = state => ({
+  counter: state
+})
 
+const mapDispatchToProps = dispatch => ({
+  dispatch
+})
+
+// Uncomment the following line for the HoCs bonus exercise
+// export default connect(mapStateToProps, mapDispatchToProps)(withMousePosition(Question1))
 export default withMousePosition(Question1)

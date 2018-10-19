@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
   1. Subscribes to changes from the store. Meaning when the store's state changes we rerender the component calling this.forceUpdate()
   2. It get the state from the store by calling store.getState() and maps parts of the state in the child component using props
 */
-export const connect = () => {
+export const connect = (mapStateToProps, mapDispatchToProps) => {
     return Component => {
         class ConnectedComponent extends React.Component {
             componentDidMount() {
