@@ -36,7 +36,7 @@ const Question4 = () => (
     <hr />
     <h3>Bonus Exercise</h3>
     <p>
-      Implement the Redux Provider in src/components/patterns/Context/xbonus/Provider.js. Once implemented, use it the Root.js
+      Implement the Redux Provider in src/components/patterns/Context/xbonus/Provider.js. Once implemented, use it in Root.js
     </p>
   </div>
 )
