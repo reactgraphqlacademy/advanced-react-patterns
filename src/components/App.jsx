@@ -7,6 +7,7 @@ import Question1 from './questions/Question1'
 import Question2 from './questions/Question2'
 import Question3 from './questions/Question3'
 import Question4 from './questions/Question4'
+import Question5 from './questions/Question5'
 import MenuItem from './patterns/CompoundComponents/exercise/MenuItem'
 import Menu from './patterns/CompoundComponents/exercise/Menu'
 import Accordion from './patterns/Context/exercise/Accordion'
@@ -60,6 +61,7 @@ class App extends React.Component {
             <Accordion header="I'm an accordion">
               <MenuItem link="q4" toggleMenu={this.toggleMenu}>4. Context</MenuItem>
             </Accordion>
+            <MenuItem link="q5" toggleMenu={this.toggleMenu}>5. Theming</MenuItem>
             <hr />
             <ul className="list-unstyled">
               <li>
@@ -70,12 +72,14 @@ class App extends React.Component {
               </li>
             </ul>
           </Menu>
+          <MenuItem link="q5" toggleMenu={this.toggleMenu}>5. Theming</MenuItem>
           <div style={styles} className="view-container">
             <h1>Advanced React Patterns</h1>
             <Route exact path="/" component={Question1} />
             <Route path="/q2" component={Question2} />
             <Route path="/q3" component={Question3} />
             <Route path="/q4" component={Question4} />
+            <Route path="/q5" component={Question5} />
           </div>
         </div>
 
