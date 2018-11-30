@@ -8,6 +8,7 @@ import Question2 from './questions/Question2'
 import Question3 from './questions/Question3'
 import Question4 from './questions/Question4'
 import Question5 from './questions/Question5'
+import Question6 from './questions/Question6'
 import MenuItem from './patterns/CompoundComponents/exercise/MenuItem'
 import Menu from './patterns/CompoundComponents/exercise/Menu'
 import Accordion from './patterns/Context/exercise/Accordion'
@@ -62,6 +63,7 @@ class App extends React.Component {
               <MenuItem link="q4" toggleMenu={this.toggleMenu}>4. Context</MenuItem>
             </Accordion>
             <MenuItem link="q5" toggleMenu={this.toggleMenu}>5. Theming</MenuItem>
+            <MenuItem link="q6" toggleMenu={this.toggleMenu}>6. Variants</MenuItem>
             <hr />
             <ul className="list-unstyled">
               <li>
@@ -80,6 +82,7 @@ class App extends React.Component {
             <Route path="/q3" component={Question3} />
             <Route path="/q4" component={Question4} />
             <Route path="/q5" component={Question5} />
+            <Route path="/q6" component={Question6} />
           </div>
         </div>
 

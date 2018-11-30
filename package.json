@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "jsonp": "^0.2.1",
+    "polished": "^2.3.0",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-bootstrap": "^0.32.1",
