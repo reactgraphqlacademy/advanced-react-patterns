@@ -1,25 +1,29 @@
 import React from "react";
-
-export class Input extends React.Component {
-  state = {
-    value: ""
-  };
-
-  onChange = e => {
-    this.setState({ value: e.target.value });
-  };
-
-  render() {
-    const { value } = this.state;
-    const { onChange } = this;
-
-    return this.props.children({ value, onChange });
-  }
-}
+import Field from "./Field";
 
 const Example = () => (
   <React.Fragment>
-    <p>The state of the input is managed by the Input component.</p>
+    <p>The state of the Field is managed by the children component.</p>
+    <p>
+      <Field
+        stateReducer={(state, change) => (isNaN(change.value) ? state : change)}
+      >
+        {({ value, onChange }) => (
+          <input placeholder="Only numbers" value={value} onChange={onChange} />
+        )}
+      </Field>
+    </p>
+    <p>
+      <Field>
+        {({ value, onChange }) => (
+          <input
+            placeholder="Any character"
+            value={value}
+            onChange={onChange}
+          />
+        )}
+      </Field>
+    </p>
   </React.Fragment>
 );
 

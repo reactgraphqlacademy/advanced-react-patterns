@@ -74,19 +74,16 @@ class App extends React.Component {
             <MenuItem link="/render-props" toggleMenu={this.toggleMenu}>
               4. Render Props
             </MenuItem>
-            <MenuItem link="/inversion-of-control" toggleMenu={this.toggleMenu}>
-              5. Inversion of Control
-            </MenuItem>
             <MenuItem link="/state-reducer" toggleMenu={this.toggleMenu}>
-              6. State Reducer
+              5. State Reducer
             </MenuItem>
             <hr />
             <MenuItem link="/compound-components" toggleMenu={this.toggleMenu}>
-              7. Compound Components
+              6. Compound Components
             </MenuItem>
             <Accordion>
               <MenuItem link="/context" toggleMenu={this.toggleMenu}>
-                8. Context
+                7. Context
               </MenuItem>
             </Accordion>
             <hr />
