@@ -14,7 +14,6 @@ import Menu from "./patterns/CompoundComponents/exercise/Menu";
 import Accordion from "./patterns/Context/exercise/Accordion";
 import CompositionPage from "./functional-programming/composition/Page";
 import ClosurePage from "./functional-programming/closure/Page";
-import "../assets/main.css";
 
 class App extends React.Component {
   constructor() {
@@ -61,17 +60,20 @@ class App extends React.Component {
             <MenuItem link="/composition" toggleMenu={this.toggleMenu}>
               1. Functional composition
             </MenuItem>
-            <MenuItem link="/" toggleMenu={this.toggleMenu}>
+            <MenuItem
+              link="/higher-order-components"
+              toggleMenu={this.toggleMenu}
+            >
               2. Higher-Order Components
             </MenuItem>
-            <MenuItem link="q2" toggleMenu={this.toggleMenu}>
+            <MenuItem link="/render-props" toggleMenu={this.toggleMenu}>
               3. Render Props
             </MenuItem>
-            <MenuItem link="q3" toggleMenu={this.toggleMenu}>
+            <MenuItem link="/compound-components" toggleMenu={this.toggleMenu}>
               4. Compound Components
             </MenuItem>
             <Accordion header="I'm an accordion">
-              <MenuItem link="q4" toggleMenu={this.toggleMenu}>
+              <MenuItem link="/context" toggleMenu={this.toggleMenu}>
                 5. Context
               </MenuItem>
             </Accordion>
