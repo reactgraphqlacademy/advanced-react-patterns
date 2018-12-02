@@ -14,6 +14,7 @@ import Menu from "./patterns/CompoundComponents/exercise/Menu";
 import Accordion from "./patterns/Context/exercise/Accordion";
 import CompositionPage from "./functional-programming/composition/Page";
 import ClosurePage from "./functional-programming/closure/Page";
+import StateReducerPage from "./patterns/StateReducer/Page";
 
 class App extends React.Component {
   constructor() {
@@ -60,21 +61,32 @@ class App extends React.Component {
             <MenuItem link="/composition" toggleMenu={this.toggleMenu}>
               1. Functional composition
             </MenuItem>
+            <MenuItem link="/closure" toggleMenu={this.toggleMenu}>
+              2. Closure
+            </MenuItem>
+            <hr />
             <MenuItem
               link="/higher-order-components"
               toggleMenu={this.toggleMenu}
             >
-              2. Higher-Order Components
+              3. Higher-Order Components
             </MenuItem>
             <MenuItem link="/render-props" toggleMenu={this.toggleMenu}>
-              3. Render Props
+              4. Render Props
             </MenuItem>
+            <MenuItem link="/inversion-of-control" toggleMenu={this.toggleMenu}>
+              5. Inversion of Control
+            </MenuItem>
+            <MenuItem link="/state-reducer" toggleMenu={this.toggleMenu}>
+              6. State Reducer
+            </MenuItem>
+            <hr />
             <MenuItem link="/compound-components" toggleMenu={this.toggleMenu}>
-              4. Compound Components
+              7. Compound Components
             </MenuItem>
-            <Accordion header="I'm an accordion">
+            <Accordion>
               <MenuItem link="/context" toggleMenu={this.toggleMenu}>
-                5. Context
+                8. Context
               </MenuItem>
             </Accordion>
             <hr />
@@ -119,6 +131,7 @@ class App extends React.Component {
               component={HigherOrderComponentsPage}
             />
             <Route path="/render-props" component={RenderPropsPage} />
+            <Route path="/state-reducer" component={StateReducerPage} />
             <Route
               path="/compound-components"
               component={CompoundComponentsPage}

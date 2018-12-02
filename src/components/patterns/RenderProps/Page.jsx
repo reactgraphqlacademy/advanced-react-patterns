@@ -6,7 +6,6 @@ import Exercise from "./exercise/BadImplementation";
 const Page = props => (
   <div>
     <h2>Render Props</h2>
-    <h3>Example</h3>
     <Example />
     <div />
     <h3>Exercise</h3>
