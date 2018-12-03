@@ -30,7 +30,10 @@ const Button = styled.i`
 
 const Example = () => (
   <div style={{ paddingBottom: "100px" }}>
-    <p>Dropdown</p>
+    <p>
+      Extend the Dropdown so it doesn't close when the user clicks outside the
+      dropdown. Use the action CLICKED_OUTSIDE_ACTION in the stateReducer.
+    </p>
     <Dropdown
       stateReducer={(state, { type, ...change }) =>
         type === CLICKED_OUTSIDE_ACTION ? state : change
