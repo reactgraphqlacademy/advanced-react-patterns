@@ -1,11 +1,18 @@
 import React from "react";
 
+export const CLICKED_OUTSIDE_ACTION = "CLICKED_OUTSIDE_ACTION";
+export const TOGGLE_DROPDOWN_ACTION = "TOGGLE_DROPDOWN_ACTION";
+
 class Dropdown extends React.Component {
   state = {
     isOpen: false
   };
 
   wrapperRef = React.createRef();
+
+  static defaultProps = {
+    stateReducer: (state, change) => change
+  };
 
   componentWillUnmount() {
     this.removeMousedownListener();
@@ -25,33 +32,42 @@ class Dropdown extends React.Component {
       !this.wrapperRef.current.contains(event.target) &&
       this.state.isOpen
     ) {
-      this.toggle();
+      this.toggleIsOpen(CLICKED_OUTSIDE_ACTION);
       this.removeMousedownListener();
     }
   };
 
-  toggle = () => {
+  toggleIsOpen = actionType => {
     if (!this.state.isOpen) {
       this.addMousedownListener();
     }
-    this.setState({ isOpen: !this.state.isOpen });
+
+    const { stateReducer } = this.props;
+
+    this.setState(state => {
+      const change = {
+        type: actionType,
+        isOpen: !state.isOpen
+      };
+      return stateReducer(state, change);
+    });
   };
 
-  onToggleDropdownClicked = event => {
+  onToggleDropdown = event => {
     event.preventDefault();
-    this.toggle();
+    this.toggleIsOpen(TOGGLE_DROPDOWN_ACTION);
   };
 
   render() {
     const { isOpen } = this.state;
-    const { onToggleDropdownClicked } = this;
+    const { onToggleDropdown } = this;
 
     return (
       <div
         style={{ position: "relative", display: "inline-block" }}
         ref={this.wrapperRef}
       >
-        {this.props.children({ onToggleDropdownClicked, isOpen })}
+        {this.props.children({ onToggleDropdown, isOpen })}
       </div>
     );
   }

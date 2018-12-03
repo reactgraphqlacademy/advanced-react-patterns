@@ -1,5 +1,5 @@
 import React from "react";
-import Dropdown, { CLICKED_OUTSIDE_ACTION } from "./DropdownStateReducer";
+import Dropdown, { CLICKED_OUTSIDE_ACTION } from "./Dropdown";
 import styled from "styled-components";
 
 export const Ul = styled.ul`
@@ -29,19 +29,19 @@ const Button = styled.i`
 `;
 
 const Example = () => (
-  <React.Fragment>
+  <div style={{ paddingBottom: "100px" }}>
     <p>Dropdown</p>
     <Dropdown
-    // stateReducer={(state, { type, ...change }) =>
-    //   type === CLICKED_OUTSIDE_ACTION ? state : change
-    // }
+      stateReducer={(state, { type, ...change }) =>
+        type === CLICKED_OUTSIDE_ACTION ? state : change
+      }
     >
-      {({ onToggleDropdownClicked, isOpen }) => (
+      {({ onToggleDropdown, isOpen }) => (
         <React.Fragment>
-          <a onClick={onToggleDropdownClicked}>
+          <span>
             Select a color
-            <Button open={isOpen} />
-          </a>
+            <Button open={isOpen} onClick={onToggleDropdown} />
+          </span>
           {isOpen ? (
             <Ul>
               <li>Red</li>
@@ -52,7 +52,7 @@ const Example = () => (
         </React.Fragment>
       )}
     </Dropdown>
-  </React.Fragment>
+  </div>
 );
 
 export default Example;
