@@ -11,11 +11,14 @@ export class Field extends React.Component {
 
   onChange = e => {
     const { stateReducer } = this.props;
-    const { state } = this.state;
+    const { value } = e.target;
 
-    this.setState(stateReducer(state, { value: e.target.value }), () => {
-      console.log("Current Field state:", this.state.value);
-    });
+    this.setState(
+      state => stateReducer(state, { ...state, value }),
+      () => {
+        console.log("Current Field state:", this.state.value);
+      }
+    );
   };
 
   render() {

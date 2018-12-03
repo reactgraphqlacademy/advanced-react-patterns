@@ -1,6 +1,8 @@
 import React from "react";
 import Example from "./example";
-import Exercise from "./exercise";
+import ExerciseOne from "./exercise_1";
+import ExerciseTwo from "./exercise_2";
+import BonusExercise from "./exercise_bonus/";
 
 const Page = () => (
   <React.Fragment>
@@ -18,8 +20,14 @@ const Page = () => (
     <h3>Example</h3>
     <Example />
 
-    <h3>Exercise</h3>
-    <Exercise />
+    <h3>Exercise 1</h3>
+    <ExerciseOne />
+
+    <h3>Exercise 2</h3>
+    <ExerciseTwo />
+
+    <h3>Bonus exercise</h3>
+    <BonusExercise />
   </React.Fragment>
 );
 
