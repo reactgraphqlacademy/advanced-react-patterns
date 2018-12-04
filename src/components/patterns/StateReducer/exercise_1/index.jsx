@@ -5,8 +5,8 @@ const Example = () => (
   <React.Fragment>
     <p>
       Implement the onReset method on
-      `src/components/patterns/StateReducer/exercise_1/Field.jsx`. It should set
-      the initial state
+      `src/components/patterns/StateReducer/exercise_1/Field.jsx`, so when the
+      input executes onReset the state reducer is invoked with the initial state
     </p>
     <p>
       <Field>

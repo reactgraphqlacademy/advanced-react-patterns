@@ -44,6 +44,7 @@ class Dropdown extends React.Component {
 
     const { stateReducer } = this.props;
 
+    // TODO finish the implementation of the following this.setState
     this.setState(state => {
       const change = {
         type: actionType,

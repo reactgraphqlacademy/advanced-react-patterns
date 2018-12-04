@@ -78,9 +78,6 @@ class App extends React.Component {
               5. State Reducer
             </MenuItem>
             <hr />
-            <MenuItem link="/design-system" toggleMenu={this.toggleMenu}>
-              7. Design system
-            </MenuItem>
             <MenuItem link="/compound-components" toggleMenu={this.toggleMenu}>
               8. Compound Components
             </MenuItem>
@@ -132,7 +129,6 @@ class App extends React.Component {
             />
             <Route path="/render-props" component={RenderPropsPage} />
             <Route path="/state-reducer" component={StateReducerPage} />
-            <Route path="/design-sytem" component={() => <h1>Todo</h1>} />
             <Route
               path="/compound-components"
               component={CompoundComponentsPage}

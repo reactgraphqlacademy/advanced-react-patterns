@@ -1,8 +1,5 @@
 import React from "react";
 
-const ON_FIELD_CHANGE = "ON_FIELD_CHANGE";
-const ON_FIELD_RESET = "ON_FIELD_RESET";
-
 export class Field extends React.Component {
   initialState = {
     value: "😄"

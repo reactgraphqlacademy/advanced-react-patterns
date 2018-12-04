@@ -32,8 +32,21 @@ const Example = () => (
   <div style={{ paddingBottom: "100px" }}>
     <p>
       Extend the Dropdown so it doesn't close when the user clicks outside the
-      dropdown. Use the action CLICKED_OUTSIDE_ACTION in the stateReducer.
+      dropdown. To achieve this you'll need to edit two different files:
     </p>
+    <ul>
+      <li>
+        In `src/components/patterns/StateReducer/exercise_bonus/Dropdown.jsx`
+        you will have to implement the <code>this.setState</code> in the{" "}
+        <code>toggleIsOpen = actionType => </code> method.
+      </li>
+      <li>
+        In `src/components/patterns/StateReducer/exercise_bonus/index.js` you
+        will have to add a stateReducer prop to the Dropdown component. Hint,
+        use a ternary operator based on the type{" "}
+        <code>CLICKED_OUTSIDE_ACTION</code>.
+      </li>
+    </ul>
     <Dropdown
       stateReducer={(state, { type, ...change }) =>
         type === CLICKED_OUTSIDE_ACTION ? state : change
