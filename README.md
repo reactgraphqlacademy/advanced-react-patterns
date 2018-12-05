@@ -7,6 +7,8 @@ This repo contains some exercises to help you learn the following advanced React
 - State Reducer
 - Compound Components
 - Context
+- Theming
+- Style Variants
 
 ## How to install
 

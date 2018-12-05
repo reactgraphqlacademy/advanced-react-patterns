@@ -1,6 +1,7 @@
 import React from "react";
 import Example from "./example";
 import Exercise from "./exercise";
+import Bonus from "./bonus";
 
 const Page = props => (
   <div>
@@ -24,6 +25,29 @@ const Page = props => (
     <hr />
     <h3>Exercise</h3>
     <Exercise />
+    <hr />
+    <h3>Bonus</h3>
+    <p>
+      The goal here is to create a <code>ThemeProvider</code> component able to
+      toggle the theme passed to the styled-component ThemeProvider.
+    </p>
+    <p>This component should do 2 things:</p>
+    <ul>
+      <li>keep track of the selected state</li>
+      <li>
+        sets the new theme to the styled-component's <code>ThemeProvider</code>
+      </li>
+    </ul>
+
+    <p>
+      Also, in order to toggle the theme, you need to use the{" "}
+      <code>ThemeContext.Consumer</code> in order to get access to the function
+      that toggles the state in your ThemeProvider. You have some hints here:
+      -EXAMPLE THEME-
+    </p>
+    <div style={{marginBottom: 100}}>
+      <Bonus />
+    </div>
   </div>
 );
 
