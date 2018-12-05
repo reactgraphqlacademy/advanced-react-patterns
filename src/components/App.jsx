@@ -16,6 +16,7 @@ import CompositionPage from "./functional-programming/composition/Page";
 import ClosurePage from "./functional-programming/closure/Page";
 import StateReducerPage from "./patterns/StateReducer/Page";
 import Theming from './patterns/Theming/Page';
+import Variants from './patterns/Variants/Page'
 
 class App extends React.Component {
   constructor() {

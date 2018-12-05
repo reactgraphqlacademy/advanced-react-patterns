@@ -4,8 +4,7 @@ import theme from "./theme";
 import { variant } from 'styled-system'
 
 const alertStyle = variant({
-  key: 'alertStyles',
-  props: "style"
+  key: 'alertStyles'
 })
 
 const Alert = styled("div")`
