@@ -27,11 +27,7 @@ const Example = () => (
       </li>
     </ul>
     <p>
-      <Field
-        stateReducer={(state, { type, ...change }) =>
-          type === ON_FIELD_RESET ? { value: "" } : { ...state, ...change }
-        }
-      >
+      <Field>
         {({ value, onChange, onReset }) => (
           <React.Fragment>
             <input

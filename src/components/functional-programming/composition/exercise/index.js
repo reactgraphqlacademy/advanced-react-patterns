@@ -5,10 +5,7 @@ import { required, mustBeEmail, atLeastFiveCharacters } from "./validators";
 // Task 1, implement the composeValidators function
 // each validator has a value as input and returns false or the error message
 export const composeValidators = (...validators) => value =>
-  validators.reduceRight(
-    (error, validator) => error || validator(value),
-    false
-  );
+  validators.reduceRight((error, validator) => false, false);
 
 // Task 2, you need to use the composeValidators so
 // - Email is validated with required and mustBeEmail

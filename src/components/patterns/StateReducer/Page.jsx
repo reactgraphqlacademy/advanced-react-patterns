@@ -2,6 +2,7 @@ import React from "react";
 import Example from "./example";
 import ExerciseOne from "./exercise_1";
 import ExerciseTwo from "./exercise_2";
+import ExerciseThree from "./exercise_3/";
 import BonusExercise from "./exercise_bonus/";
 
 const Page = () => (
@@ -21,6 +22,9 @@ const Page = () => (
 
     <h3>Exercise 2</h3>
     <ExerciseTwo />
+
+    <h3>Exercise 3</h3>
+    <ExerciseThree />
 
     <h3>Bonus exercise</h3>
     <BonusExercise />

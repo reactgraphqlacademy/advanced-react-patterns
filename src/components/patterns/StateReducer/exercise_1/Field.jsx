@@ -17,9 +17,8 @@ export class Field extends React.Component {
   };
 
   onReset = e => {
-    const { stateReducer } = this.props;
-
-    this.setState(state => stateReducer(state, this.initialState));
+    // TODO finish the implementation of this method so when it's
+    // executed it invokes the state reducer with the initial state
   };
 
   render() {

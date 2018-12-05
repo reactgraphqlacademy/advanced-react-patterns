@@ -17,10 +17,9 @@ const Page = () => (
     <h3>Exercise</h3>
     <p>
       Validate the following form composing the validators defined in
-      `src/components/functional-programming/composition/exercise/valiators`
-    </p>
-    <p>
-      Fist you'll need to implment the composeValidators function defined in
+      `src/components/functional-programming/composition/exercise/valiators`. To
+      do that you'll need to finish the implementation of the composeValidators
+      function defined in
       `src/components/functional-programming/composition/exercise/index`
     </p>
     <FormExercise />

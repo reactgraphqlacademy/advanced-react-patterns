@@ -22,12 +22,7 @@ export class Field extends React.Component {
   };
 
   onReset = e => {
-    const { stateReducer } = this.props;
-    const { state } = this.state;
-
-    this.setState(
-      stateReducer(state, { type: ON_FIELD_RESET, value: this.initialState })
-    );
+    // TODO finish the implementation of this method. You need to use the ON_FIELD_RESET type.
   };
 
   render() {
