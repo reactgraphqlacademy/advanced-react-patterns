@@ -1,9 +1,5 @@
 const theme = {
-  colors: {
-    primary: "peru",
-    secondary: "#f6f6ff",
-    background: "papayawhip"
-  }
+  // add some `colors` here maybe??
 }
 
 export default theme;

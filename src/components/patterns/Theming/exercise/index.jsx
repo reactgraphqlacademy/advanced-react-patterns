@@ -1,6 +1,6 @@
 import React from "react";
-import styled, { ThemeProvider } from "styled-components";
-import theme from "./theme";
+import styled from "styled-components";
+// import theme from "./theme";
 
 /*
   Exercise TODO:
@@ -16,11 +16,10 @@ import theme from "./theme";
 const Card = styled("div")`
   border-radius: 8px;
   padding: 16px;
-  box-shadow: 0 0 8px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.1);
   font-size: 18px;
   font-weight: 800;
   text-align: center;
-  color: ${props => props.theme.colors.primary};
   background-color: white;
 `;
 
@@ -28,16 +27,13 @@ const Card = styled("div")`
   in this component just use the background color from the theme and asign it to this component
 */
 const Wrapper = styled("div")`
-  background-color: ${props => props.theme.colors.background};
   padding: 40px;
 `;
 
 const ThemingExercise = () => (
-  <ThemeProvider theme={theme}>
-    <Wrapper>
-      <Card>Hallo I'm a Card</Card>
-    </Wrapper>
-  </ThemeProvider>
+  <Wrapper>
+    <Card>Hallo I'm a Card</Card>
+  </Wrapper>
 );
 
 export default ThemingExercise;

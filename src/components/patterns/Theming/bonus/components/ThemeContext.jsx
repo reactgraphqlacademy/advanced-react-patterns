@@ -2,33 +2,39 @@ import React from 'react'
 import themes from '../theme'
 import { ThemeProvider as StyledProvider } from 'styled-components'
 
-const ThemeContext = React.createContext({});
+// First you need to create your `ThemeContext` (use React.CreateContext());
 
 class ThemeProvider extends React.Component {
+
+  // You should heep track of some sort of state to toggle the theme from `light` to `dark`
+  // (see the themes.js file)
   state = {
-    theme: "light"
+    theme: "???"
   }
 
   handleThemeToggle = () => {
-    this.setState(prevState => ({theme: prevState.theme === 'light' ? 'dark' : 'light'}))
+    /*
+      Toggle the theme state using `this.setState`.
+      remember you can call this function with a funcion as a parameter:
+      `this.setState(prevState => {}); // prevState is a reference to the actual previous state.
+      remember that `this.setState` is asynchronous
+      TODO: link to setState documentation!
+    */
   }
 
   render() {
-    const { theme } = this.state;
-    const { children } = this.props;
-    console.log('theme => ', themes[theme]);
+    const { children } = this.props
     return (
-      <ThemeContext.Provider value={{theme, setValue: this.handleThemeToggle}}>
-        <StyledProvider theme={themes[theme]}>
-          {children}
-        </StyledProvider>
-      </ThemeContext.Provider>
+      <div>
+        {children}
+      </div>
     )
   }
 }
-const ThemeConsumer = ThemeContext.Consumer;
+
+const ThemeConsumer = "???"
 
 export {
   ThemeProvider,
-  ThemeConsumer
-}
+  ThemeConsumer // what should be the value of this variable ?? ThemeContext.???
+ }

@@ -24,6 +24,7 @@ const Page = props => (
     <Example />
     <hr />
     <h3>Exercise</h3>
+    <p>go to <code>src/components/patterns/Theming/exercise/index.jsx</code> and start doing the TODOs mentioned in that file!</p>
     <Exercise />
     <hr />
     <h3>Bonus</h3>
