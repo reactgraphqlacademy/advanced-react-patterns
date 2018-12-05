@@ -87,7 +87,7 @@ class App extends React.Component {
                 9. Context
               </MenuItem>
             </Accordion>
-            <MenuItem link="q5" toggleMenu={this.toggleMenu}>5. Theming</MenuItem>
+            <MenuItem link="/theming" toggleMenu={this.toggleMenu}>5. Theming</MenuItem>
             <hr />
             <ul className="list-unstyled">
               <li>
@@ -112,7 +112,6 @@ class App extends React.Component {
               </li>
             </ul>
           </Menu>
-          <MenuItem link="q5" toggleMenu={this.toggleMenu}>5. Theming</MenuItem>
           <div style={styles} className="view-container">
             <Route
               exact
