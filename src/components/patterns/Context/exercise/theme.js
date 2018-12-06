@@ -1,20 +1,12 @@
-const light = {
-  colors: {
-    primary: '#07c',
-    secondary: '#3f714c',
-    background: '#f6f6ff'
+const themes = {
+  light: {
+    foreground: '#000000',
+    background: '#eeeeee',
   },
-}
-
-const dark = {
-  colors: {
-    primary: '#3f714c',
-    secondary: '#07c',
-    background: '#ffefd5'
+  dark: {
+    foreground: '#ffffff',
+    background: '#222222',
   }
 }
 
-export default {
-  light,
-  dark
-}
+export default themes

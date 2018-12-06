@@ -7,14 +7,26 @@ const Wrapper = styled("div")`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: ${({theme}) => theme.colors.background};
+
 `
+/*
+  after implementing the ThemeProvider, you should be able to add this next line to the `Wrapper` with no errors:
+
+  background-color: ${({theme}) => theme.background};
+
+*/
 
 const Heading = styled.h1`
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
-  color: ${({theme}) => theme.colors.primary};
+
 `
+/*
+  after implementing the ThemeProvider, you should be able to add this next line to the `Heading` with no errors:
+
+  color: ${({theme}) => theme.foreground};
+
+*/
 
 const Hero = ({children}) => (
   <Wrapper>

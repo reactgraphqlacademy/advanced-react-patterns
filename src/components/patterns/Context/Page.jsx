@@ -1,6 +1,6 @@
-import React from "react"
-import Example from './example'
-import Exercise from './exercise'
+import React from "react";
+import Example from "./example";
+import Exercise from "./exercise";
 
 const Page = () => (
   <div>
@@ -15,8 +15,8 @@ const Page = () => (
       We are going to create a <strong>Theme Switcher</strong> component using
       Context. If you see{" "}
       <code>src/components/patterns/Context/exercise/theme.js</code>, there are{" "}
-      <strong>2 themes defined</strong>. You should be able to toggle between these 2
-      themes.
+      <strong>2 themes defined</strong>. You should be able to toggle between
+      these 2 themes.
     </p>
     <p>This component should:</p>
     <ul>
@@ -30,17 +30,21 @@ const Page = () => (
       </li>
     </ul>
     <p>
+      In order to check if the theme is actually changing, you can refactor the{" "}
+      <code>Hero</code> component (
+      <code>src/components/patterns/Context/exercise/components/Hero.jsx</code>)
+    </p>
+    <p>
       Also, in order to toggle the theme, you need to use the{" "}
       <code>ThemeContext.Consumer</code> in order to get access to the function
-      that toggles the state in your ThemeProvider. You have some hints here:
-      -EXAMPLE THEME-
+      that toggles the state in your ThemeProvider.
     </p>
     <Exercise />
     <hr />
     <h3>Bonus Exercise</h3>
     <p>
       Implement the Redux Provider in
-      src/components/patterns/Context/xbonus/Provider.js. Once implemented, use
+      <code>src/components/patterns/Context/xbonus/Provider.js</code>. Once implemented, use
       it in Root.js
     </p>
   </div>

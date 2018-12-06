@@ -5,12 +5,13 @@ const StyledButton = styled.button`
   padding: 8px 16px;
   border-radius: 3px;
   border: none;
-
-  background-color: ${({variant, theme}) => theme.colors[variant] || "white"};
   color: white;
+  background-color: black;
 `
 
-const Button = ({onClick, children, ...rest}) => (
+const dummyFunction = () => console.log('BUTTON CLICKED!');
+
+const Button = ({onClick = dummyFunction, children, ...rest}) => (
   <StyledButton onClick={onClick} {...rest}>{children}</StyledButton>
 )
 
