@@ -93,13 +93,6 @@ const Example = () => (
       <p>
         <em>File: patterns/RenderProps/example/Field.jsx</em>
       </p>
-      {/* <h3>Inversion of Control</h3>
-      <p>
-        This technique gives us a lot of control on how the consumer of the
-        Input wants to render the input without having to add any rendering
-        functionality in the Input component. This technique is called Inversion
-        of Control
-      </p> */}
       <h3>Example 2: Measure</h3>
       <p>
         In this second example we have a "Render Props" component called
