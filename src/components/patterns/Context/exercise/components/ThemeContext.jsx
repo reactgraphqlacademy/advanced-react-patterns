@@ -25,9 +25,8 @@ class ThemeProvider extends React.Component {
   render() {
     const { children } = this.props
     /*
-      you should replace the `div` here with your ThemeContext provider and the StyledProvider. you can see an example of this in the next links:
-      - https://www.styled-components.com/docs/api#themeprovider
-      - https://reactjs.org/docs/context.html#updating-context-from-a-nested-component
+      - you should replace the `wrap` your whole app with ThemeContext provider.
+      - the theme you pass to the `StyledProvider` is the one you are tracking in this component.
 
       The value of your context should be the current theme, and also your `handleThemeToggle` function.
       this is needed so we can have access to this function in other parts of our code, and effectively toggle the theme.
