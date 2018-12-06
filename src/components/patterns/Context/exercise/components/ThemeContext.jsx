@@ -35,9 +35,9 @@ class ThemeProvider extends React.Component {
       => you can do this in `src/components/patterns/Context/exercise/components/App.jsx`
     */
     return (
-      <div>
+      <StyledProvider theme={themes['light']}>
         {children}
-      </div>
+      </StyledProvider>
     )
   }
 }
