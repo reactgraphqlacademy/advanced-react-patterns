@@ -19,7 +19,7 @@ const Wrapper = styled("div")`
 const Heading = styled.h1`
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
-
+  margin-bottom: 24px;
 `
 /*
   after implementing the ThemeProvider, you should be able to add this next line to the `Heading` with no errors:
