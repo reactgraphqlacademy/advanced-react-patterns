@@ -6,6 +6,6 @@ export const mustBeEmail = value => {
 };
 
 export const atLeastFiveCharacters = value =>
-  value && value.length > 5
+  value && value.length >= 5
     ? undefined
     : "You need to type at least 5 characters";

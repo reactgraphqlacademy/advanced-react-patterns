@@ -1,5 +1,8 @@
 export const compose = (...functions) => initialValue =>
-  functions.reduceRight((currentValue, fn) => fn(currentValue), initialValue);
+  functions.reduceRight(
+    (accumulatedValue, fn) => fn(accumulatedValue),
+    initialValue
+  );
 
 const toUpperCase = text => text.toUpperCase();
 
