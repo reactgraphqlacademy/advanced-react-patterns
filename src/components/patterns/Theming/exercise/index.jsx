@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 // import theme from "./theme";
 
 /*
@@ -29,6 +29,12 @@ const Card = styled("div")`
 const Wrapper = styled("div")`
   padding: 40px;
 `;
+
+/*
+  TODO: you need to "wrap" your component with the `ThemeProvider` component
+  - remember that you need to pass a `theme` to this provider.
+  - documentation:
+*/
 
 const ThemingExercise = () => (
   <Wrapper>
