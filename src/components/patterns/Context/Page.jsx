@@ -1,40 +1,41 @@
-import React from "react";
-import { Button } from "react-bootstrap";
-
-import { ModalContext } from "./example/Modal";
+import React from "react"
+import Example from './example'
+import Exercise from './exercise'
 
 const Page = () => (
   <div>
     <h2>Context</h2>
     <h3>Example</h3>
-    <p>
-      The following component is using context:
-      <ModalContext.Consumer>
-        {({ showModal }) => (
-          <Button
-            onClick={() => {
-              showModal(<h1>Hi there!</h1>);
-            }}
-            bsStyle="info"
-          >
-            Show modal
-          </Button>
-        )}
-      </ModalContext.Consumer>
-    </p>
+    <Example />
     <p>
       <em>Folder: src/components/patterns/Context/example/Modal.jsx</em>
     </p>
     <h3>Exercise</h3>
     <p>
-      Refactor the components in src/components/patterns/Context/exercise/ to
-      pass the properties to child components using context
+      We are going to create a <strong>Theme Switcher</strong> component using
+      Context. If you see{" "}
+      <code>src/components/patterns/Context/exercise/theme.js</code>, there are{" "}
+      <strong>2 themes defined</strong>. You should be able to toggle between these 2
+      themes.
     </p>
-    <div className="alert alert-warning fade in">
-      <strong>Warning!</strong> You don't have to implement the Accordion
-      component. The goal is the Accordion component doesn't have to know the
-      toggleMenu function exists
-    </div>
+    <p>This component should:</p>
+    <ul>
+      <li>
+        Track the current <code>theme</code> in the state
+      </li>
+      <li>Implement a fucntion to toggle the theme</li>
+      <li>
+        pass the current theme to the <code>ThemeProvider</code> from{" "}
+        <code>styled-components</code>
+      </li>
+    </ul>
+    <p>
+      Also, in order to toggle the theme, you need to use the{" "}
+      <code>ThemeContext.Consumer</code> in order to get access to the function
+      that toggles the state in your ThemeProvider. You have some hints here:
+      -EXAMPLE THEME-
+    </p>
+    <Exercise />
     <hr />
     <h3>Bonus Exercise</h3>
     <p>

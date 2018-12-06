@@ -11,7 +11,6 @@ import CompoundComponentsPage from "./patterns/CompoundComponents/Page";
 import ContextPage from "./patterns/Context/Page";
 import MenuItem from "./patterns/CompoundComponents/exercise/MenuItem";
 import Menu from "./patterns/CompoundComponents/exercise/Menu";
-import Accordion from "./patterns/Context/exercise/Accordion";
 import CompositionPage from "./functional-programming/composition/Page";
 import ClosurePage from "./functional-programming/closure/Page";
 import StateReducerPage from "./patterns/StateReducer/Page";
@@ -83,17 +82,13 @@ class App extends React.Component {
             <MenuItem link="/compound-components" toggleMenu={this.toggleMenu}>
               8. Compound Components
             </MenuItem>
-            <Accordion>
+
               <MenuItem link="/context" toggleMenu={this.toggleMenu}>
                 9. Context
               </MenuItem>
-            </Accordion>
-            <MenuItem link="/theming" toggleMenu={this.toggleMenu}>
-              5. Theming
-            </MenuItem>
-            <MenuItem link="/variants" toggleMenu={this.toggleMenu}>
-              6. Variants
-            </MenuItem>
+
+            <MenuItem link="/theming" toggleMenu={this.toggleMenu}>5. Theming</MenuItem>
+            <MenuItem link="/variants" toggleMenu={this.toggleMenu}>6. Variants</MenuItem>
             <hr />
             <ul className="list-unstyled">
               <li>
@@ -119,7 +114,16 @@ class App extends React.Component {
             </ul>
           </Menu>
           <div style={styles} className="view-container">
-            <h1>Advanced React Patterns</h1>
+            <Route
+              exact
+              path="/"
+              render={() => (
+                <h1>
+                  Welcome to functional programming and advanced patterns in
+                  React!
+                </h1>
+              )}
+            />
             <Route exact path="/composition" component={CompositionPage} />
             <Route path="/closure" component={ClosurePage} />
             <Route

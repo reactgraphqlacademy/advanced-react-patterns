@@ -1,10 +1,10 @@
 import React from "react";
-import { ThemeConsumer } from "./ThemeContext";
+import { ThemeContext } from "./ThemeContext";
 import Button from "./Button";
 import Hero from "./Hero";
 
 const App = () => (
-  <ThemeConsumer>
+  <ThemeContext.Consumer>
     {({ setValue }) => (
       <Hero>
         <Button variant="secondary" onClick={setValue}>
@@ -12,7 +12,7 @@ const App = () => (
         </Button>
       </Hero>
     )}
-  </ThemeConsumer>
+  </ThemeContext.Consumer>
 );
 
 export default App;

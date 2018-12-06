@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThemeProvider } from './components/ThemeContext'
+import ThemeProvider from './components/ThemeContext'
 import App from './components/App'
 
 const Root = () => (

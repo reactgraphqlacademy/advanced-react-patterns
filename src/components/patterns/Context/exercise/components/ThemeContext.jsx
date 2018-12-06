@@ -2,7 +2,7 @@ import React from 'react'
 import themes from '../theme'
 import { ThemeProvider as StyledProvider } from 'styled-components'
 
-const ThemeContext = React.createContext({});
+export const ThemeContext = React.createContext({});
 
 class ThemeProvider extends React.Component {
   state = {
@@ -26,9 +26,5 @@ class ThemeProvider extends React.Component {
     )
   }
 }
-const ThemeConsumer = ThemeContext.Consumer;
 
-export {
-  ThemeProvider,
-  ThemeConsumer
-}
+export default ThemeProvider
