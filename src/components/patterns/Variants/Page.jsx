@@ -47,6 +47,14 @@ const Page = props => (
       <li>error</li>
     </ul>
     <Exercise />
+    <hr/>
+    <h3>Bonus</h3>
+    <p>now let's try to embrace more tools from <code>styled-system</code>. the new things we are going to cover as a demo are:</p>
+    <ul>
+      <li><code>styled-system</code> utilities like <code>space</code></li>
+      <li>the use of the prop <code>as</code> from styled-components</li>
+      <li>mix all with your theme</li>
+    </ul>
   </div>
 );
 
