@@ -7,6 +7,14 @@ const Page = () => (
   <div>
     <h2>Compound Components</h2>
     <h3>Example</h3>
+    <p>
+      <a
+        target="_blank"
+        href="https://github.com/reactjsacademy/advanced-react-patterns/tree/master/src/components/patterns/CompoundComponents/example"
+      >
+        source code exercise branch &#187;
+      </a>
+    </p>
     <p>The following components are a compound component:</p>
     <p>
       <em>
@@ -39,6 +47,14 @@ const Page = () => (
       </RadioGroup>
     </div>
     <h3>Exercise</h3>
+    <p>
+      <a
+        target="_blank"
+        href="https://github.com/reactjsacademy/advanced-react-patterns/tree/master/src/components/patterns/CompoundComponents/exercise"
+      >
+        source code exercise branch &#187;
+      </a>
+    </p>
     <p>
       Refactor the components in patterns/CompoundComponents/exercise/ so we
       don't have to pass explicitly the toggleMenu property on every MenuItem.

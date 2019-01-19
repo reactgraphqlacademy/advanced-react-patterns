@@ -12,6 +12,14 @@ const Page = ({ dispatch, ...props }) => (
     <h2>Higher-Order Components</h2>
     <h3>Example</h3>
     <p>
+      <a
+        target="_blank"
+        href="https://github.com/reactjsacademy/advanced-react-patterns/blob/master/src/components/patterns/HigherOrderComponents/example/withMousePosition.jsx"
+      >
+        source code exercise branch &#187;
+      </a>
+    </p>
+    <p>
       The following component is a higher-order component called
       withMousePosition, it prints the position of the mouse when you move the
       mouse over the component using props.
@@ -27,6 +35,14 @@ const Page = ({ dispatch, ...props }) => (
       </pre>
     </div>
     <h3>Exercise withData</h3>
+    <p>
+      <a
+        target="_blank"
+        href="https://github.com/reactjsacademy/advanced-react-patterns/tree/master/src/components/patterns/HigherOrderComponents/exercise_1"
+      >
+        source code exercise branch &#187;
+      </a>
+    </p>
     <p>A typical use case of a HoC is to fetch data into a component.</p>
     <p>
       <strong>Task:</strong> Can you compose the List component displayed below
@@ -69,6 +85,14 @@ const Page = ({ dispatch, ...props }) => (
     </div>
     <hr />
     <h3>Exercise withWidth</h3>
+    <p>
+      <a
+        target="_blank"
+        href="https://github.com/reactjsacademy/advanced-react-patterns/blob/master/src/components/patterns/HigherOrderComponents/exercise_2/withWidth.jsx"
+      >
+        source code exercise branch &#187;
+      </a>
+    </p>
     <p>
       A good implementation of a HoC lets the developer that uses the HoC
       configure it easily without having to reimplement anything.
@@ -126,6 +150,14 @@ const Page = ({ dispatch, ...props }) => (
     </div>
     <hr />
     <h3>Bonus exercise</h3>
+    <p>
+      <a
+        target="_blank"
+        href="https://github.com/reactjsacademy/advanced-react-patterns/tree/master/src/components/patterns/HigherOrderComponents/exercise_bonus"
+      >
+        source code exercise branch &#187;
+      </a>
+    </p>
     <p>
       Implement the connect from react-redux. Look at the comments in
       src/components/patterns/HigherOrderComponents/xbonus/connect.js

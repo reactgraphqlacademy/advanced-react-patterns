@@ -9,6 +9,14 @@ const Example = () => (
       <h3>Example 1</h3>
       <h4>Input</h4>
       <p>
+        <a
+          target="_blank"
+          href="https://github.com/reactjsacademy/advanced-react-patterns/blob/master/src/components/patterns/RenderProps/example/Input.jsx"
+        >
+          source code exercise branch &#187;
+        </a>
+      </p>
+      <p>
         We are going to see two examples of the "Render Props". In the first
         example the state of the input is managed by the Input component, and
         the rendering of the input (the presentational bits) are the concern of
@@ -60,6 +68,14 @@ const Example = () => (
       </p>
       <h4>Field</h4>
       <p>
+        <a
+          target="_blank"
+          href="https://github.com/reactjsacademy/advanced-react-patterns/blob/master/src/components/patterns/RenderProps/example/Field.jsx"
+        >
+          source code exercise branch &#187;
+        </a>
+      </p>
+      <p>
         The advantage of separating the Input and the input is that the Input
         functionality can also be applied to other form controls like radio
         buttons, or select fields, etc. Threfore, it probably makes more sense
@@ -94,6 +110,14 @@ const Example = () => (
         <em>File: patterns/RenderProps/example/Field.jsx</em>
       </p>
       <h3>Example 2: Measure</h3>
+      <p>
+        <a
+          target="_blank"
+          href="https://github.com/reactjsacademy/advanced-react-patterns/blob/master/src/components/patterns/RenderProps/example/Measure.jsx"
+        >
+          source code exercise branch &#187;
+        </a>
+      </p>
       <p>
         In this second example we have a "Render Props" component called
         Measure. Measure provides the width and the height to the children

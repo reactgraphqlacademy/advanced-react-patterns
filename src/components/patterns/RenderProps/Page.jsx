@@ -9,6 +9,14 @@ const Page = props => (
     <Example />
     <div />
     <h3>Exercise</h3>
+    <p>
+      <a
+        target="_blank"
+        href="https://github.com/reactjsacademy/advanced-react-patterns/tree/master/src/components/patterns/RenderProps/exercise"
+      >
+        source code exercise branch &#187;
+      </a>
+    </p>
     Refactor the HoCs GitHubIssueSearchInfiniteScroller to be a Render Props
     <Exercise />
     <hr />

@@ -15,18 +15,58 @@ const Page = () => (
       control.
     </p>
     <h3>Example</h3>
+    <p>
+      <a
+        target="_blank"
+        href="https://github.com/reactjsacademy/advanced-react-patterns/tree/master/src/components/patterns/StateReducer/example"
+      >
+        source code exercise branch &#187;
+      </a>
+    </p>
     <Example />
 
     <h3>Exercise 1</h3>
+    <p>
+      <a
+        target="_blank"
+        href="https://github.com/reactjsacademy/advanced-react-patterns/tree/master/src/components/patterns/StateReducer/exercise_1"
+      >
+        source code exercise branch &#187;
+      </a>
+    </p>
     <ExerciseOne />
 
     <h3>Exercise 2</h3>
+    <p>
+      <a
+        target="_blank"
+        href="https://github.com/reactjsacademy/advanced-react-patterns/tree/master/src/components/patterns/StateReducer/exercise_2"
+      >
+        source code exercise branch &#187;
+      </a>
+    </p>
     <ExerciseTwo />
 
     <h3>Exercise 3</h3>
+    <p>
+      <a
+        target="_blank"
+        href="https://github.com/reactjsacademy/advanced-react-patterns/tree/master/src/components/patterns/StateReducer/exercise_3"
+      >
+        source code exercise branch &#187;
+      </a>
+    </p>
     <ExerciseThree />
 
     <h3>Bonus exercise</h3>
+    <p>
+      <a
+        target="_blank"
+        href="https://github.com/reactjsacademy/advanced-react-patterns/tree/master/src/components/patterns/StateReducer/exercise_bonus"
+      >
+        source code exercise branch &#187;
+      </a>
+    </p>
     <BonusExercise />
   </React.Fragment>
 );

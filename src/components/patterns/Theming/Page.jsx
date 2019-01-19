@@ -20,9 +20,25 @@ const Page = props => (
       attached to component props.
     </p>
     <h3>Example</h3>
+    <p>
+      <a
+        target="_blank"
+        href="https://github.com/reactjsacademy/advanced-react-patterns/tree/master/src/components/patterns/Theming/example"
+      >
+        source code exercise branch &#187;
+      </a>
+    </p>
     <Example />
     <hr />
     <h3>Exercise</h3>
+    <p>
+      <a
+        target="_blank"
+        href="https://github.com/reactjsacademy/advanced-react-patterns/tree/master/src/components/patterns/Theming/exercise"
+      >
+        source code exercise branch &#187;
+      </a>
+    </p>
     <div style={{ marginBottom: 100 }}>
       <Exercise />
     </div>

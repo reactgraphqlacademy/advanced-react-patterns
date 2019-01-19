@@ -6,6 +6,14 @@ const Page = () => (
     <h2>Closure</h2>
     <h3>Exercise</h3>
     <p>
+      <a
+        target="_blank"
+        href="https://github.com/reactjsacademy/advanced-react-patterns/blob/master/src/components/functional-programming/closure/exercise.js"
+      >
+        source code exercise branch &#187;
+      </a>
+    </p>
+    <p>
       Implement the <code>function add()</code> in
       `src/components/functional-programming/closure/exercise` so
       <code>addFive(7)</code> outputs 12
