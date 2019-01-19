@@ -7,7 +7,7 @@ const exampleText = "1 2 3 ReactJS Academy is a m a z i n g";
 
 const Page = () => (
   <React.Fragment>
-    <h2>Composition</h2>
+    <h2>Functional composition</h2>
     <h3>Example</h3>
     <p>
       <a
