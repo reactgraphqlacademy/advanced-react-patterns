@@ -12,7 +12,9 @@ const Page = () => (
       State reducer allows consumers to control how the state is managed. This
       means the consumer has control over some logic in the parent. This is very
       useful in combination with the Render Props. This is called inversion of
-      control.
+      control. Heads up, the State Reducer pattern exposes implementation
+      details by exposing component state logic. Think twice before applying
+      this pattern.
     </p>
     <h3>Example</h3>
     <p>

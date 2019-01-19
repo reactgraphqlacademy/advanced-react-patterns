@@ -84,7 +84,9 @@ const Page = ({ dispatch, ...props }) => (
       </ul>
     </div>
     <hr />
-    <h3>Exercise withWidth</h3>
+    <h3>
+      Exercise withWidth <a name="withdata" />
+    </h3>
     <p>
       <a
         target="_blank"
