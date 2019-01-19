@@ -124,7 +124,7 @@ class App extends React.Component {
             </p>
             <hr />
             <MenuItem link="/composition" toggleMenu={this.toggleMenu}>
-              1. Functional composition
+              1. Function composition
             </MenuItem>
             <MenuItem link="/closure" toggleMenu={this.toggleMenu}>
               2. Closure
