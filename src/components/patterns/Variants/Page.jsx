@@ -39,7 +39,7 @@ const Page = props => (
       In this simple example, we can focus on changing the{" "}
       <code>background-color</code> & <code>color</code> of each variant.
     </p>
-    <p>the variants should be:</p>
+    <p>The variants should be:</p>
     <ul>
       <li>default</li>
       <li>success</li>
