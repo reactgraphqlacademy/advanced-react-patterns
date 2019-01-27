@@ -1,5 +1,5 @@
 import React from "react";
-import { Route } from "react-router-dom";
+import { Route, Redirect } from "react-router-dom";
 
 import Root from "./Root";
 import withWidth, {
@@ -15,8 +15,8 @@ import Accordion from "./patterns/Context/exercise/components/Accordion";
 import CompositionPage from "./functional-programming/composition/Page";
 import ClosurePage from "./functional-programming/closure/Page";
 import StateReducerPage from "./patterns/StateReducer/Page";
-import Theming from './patterns/Theming/Page';
-import Variants from './patterns/Variants/Page'
+import Theming from "./patterns/Theming/Page";
+import Variants from "./patterns/Variants/Page";
 
 class App extends React.Component {
   constructor() {
@@ -49,11 +49,7 @@ class App extends React.Component {
         <div id="page-wrap">
           <Menu isOpen={isMenuOpen} toggleMenu={this.toggleMenu}>
             <p className="text-center">
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://reactjs.academy/react-redux-training-berlin"
-              >
+              <a href="https://reactjs.academy">
                 <img alt="ReactJS Academy" src="/logo.png" />
                 <br />
                 ReactJS.Academy
@@ -80,8 +76,12 @@ class App extends React.Component {
               5. State Reducer
             </MenuItem>
             <hr />
-            <MenuItem link="/theming" toggleMenu={this.toggleMenu}>6. Theming</MenuItem>
-            <MenuItem link="/variants" toggleMenu={this.toggleMenu}>7. Variants</MenuItem>
+            <MenuItem link="/theming" toggleMenu={this.toggleMenu}>
+              6. Theming
+            </MenuItem>
+            <MenuItem link="/variants" toggleMenu={this.toggleMenu}>
+              7. Variants
+            </MenuItem>
             <hr />
             <MenuItem link="/compound-components" toggleMenu={this.toggleMenu}>
               8. Compound Components
@@ -119,12 +119,7 @@ class App extends React.Component {
             <Route
               exact
               path="/"
-              render={() => (
-                <h1>
-                  Welcome to functional programming and advanced patterns in
-                  React!
-                </h1>
-              )}
+              render={() => <Redirect to="/composition" />}
             />
             <Route path="/composition" component={CompositionPage} />
             <Route path="/closure" component={ClosurePage} />
