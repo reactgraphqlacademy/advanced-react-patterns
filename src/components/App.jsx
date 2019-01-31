@@ -56,11 +56,11 @@ class App extends React.Component {
               </a>
             </p>
             <hr />
-            <MenuItem link="/composition" toggleMenu={this.toggleMenu}>
-              1. Functional composition
-            </MenuItem>
             <MenuItem link="/closure" toggleMenu={this.toggleMenu}>
-              2. Closure
+              1. Closure
+            </MenuItem>
+            <MenuItem link="/composition" toggleMenu={this.toggleMenu}>
+              2. Function composition
             </MenuItem>
             <hr />
             <MenuItem
@@ -116,11 +116,7 @@ class App extends React.Component {
             </ul>
           </Menu>
           <div style={styles} className="view-container">
-            <Route
-              exact
-              path="/"
-              render={() => <Redirect to="/composition" />}
-            />
+            <Route exact path="/" render={() => <Redirect to="/closure" />} />
             <Route path="/composition" component={CompositionPage} />
             <Route path="/closure" component={ClosurePage} />
             <Route
