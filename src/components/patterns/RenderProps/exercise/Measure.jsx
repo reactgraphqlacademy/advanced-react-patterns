@@ -31,7 +31,7 @@ class Measure extends React.Component {
 
     return (
       <div style={{ display: "block" }} ref={ref => (this.wrapper = ref)}>
-        {this.props.children(width)}
+        You need to add something here. Don't change the wrapping div.
       </div>
     );
   }
