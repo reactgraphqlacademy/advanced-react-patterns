@@ -52,18 +52,14 @@ const Example = () => (
         example. Check this file <em>patterns/RenderProps/example/index.jsx</em>
       </p>
       <p>
-        <Field>
-          {({ value, onChange }) => (
-            <select onChange={onChange}>
-              <option selected={value === "red"} value="red">
-                Red
-              </option>
-              <option selected={value === "blue"} value="blue">
-                blue
-              </option>
-            </select>
-          )}
-        </Field>
+        <select onChange={() => {}}>
+          <option selected={"value" === "red"} value="red">
+            Red
+          </option>
+          <option selected={"value" === "blue"} value="blue">
+            blue
+          </option>
+        </select>
       </p>
     </div>
     <div className="col-sm-6">
@@ -101,14 +97,12 @@ const Example = () => (
       </ul>
     </div>
     <div className="col-sm-6">
-      <Measure>
-        {width => (
-          <figure>
-            <img alt="dog" className="img-responsive" src="/dog.jpg" />
-            <figcaption>My width is {width} px</figcaption>
-          </figure>
-        )}
-      </Measure>
+      <figure>
+        <img alt="dog" className="img-responsive" src="/dog.jpg" />
+        <figcaption>
+          My width is {"REPLACE THIS WITH THE ACTUAL width"} px
+        </figcaption>
+      </figure>
     </div>
   </div>
 );
