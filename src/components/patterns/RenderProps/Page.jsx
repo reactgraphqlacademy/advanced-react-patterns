@@ -1,14 +1,16 @@
 import React from "react";
 import Example from "./example";
-//import Exercise from '../exercise/HoCs/GitHubIssueSearchInfiniteScroller'
-import Exercise from "./exercise/BadImplementation";
+import Exercise from "./exercise";
+//import BonusExercise from '../exercise_bonus/HoCs/GitHubIssueSearchInfiniteScroller'
+import BonusExercise from "./exercise_bonus/BadImplementation";
 
 const Page = props => (
   <div>
     <h2>Render Props</h2>
     <Example />
     <div />
-    <h3>Exercise</h3>
+    <Exercise />
+    <h3>Bonus exercise</h3>
     <p>
       <a
         target="_blank"
@@ -18,7 +20,7 @@ const Page = props => (
       </a>
     </p>
     Refactor the HoCs GitHubIssueSearchInfiniteScroller to be a Render Props
-    <Exercise />
+    <BonusExercise />
     <hr />
   </div>
 );
