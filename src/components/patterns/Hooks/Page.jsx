@@ -1,19 +1,14 @@
 import React from "react";
-import StateExample from "./example_state";
+import Examples from "./examples";
 import Exercise from "./exercise";
+import Bonus from "./exercise_bonus";
 
 const Page = props => (
   <div>
     <h2>Hooks</h2>
-    <h3>Examples</h3>
-    <hr />
-    <h4>State Hook</h4>
-    <StateExample />
-    <hr />
-    <h4>Effect Hook Example</h4>
-    <hr />
-    <h3>Exercise</h3>
+    <Examples />
     <Exercise />
+    <Bonus />
   </div>
 );
 
