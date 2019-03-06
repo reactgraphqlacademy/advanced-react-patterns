@@ -15,8 +15,9 @@ import Accordion from "./patterns/Context/exercise/components/Accordion";
 import CompositionPage from "./functional-programming/composition/Page";
 import ClosurePage from "./functional-programming/closure/Page";
 import StateReducerPage from "./patterns/StateReducer/Page";
-import Theming from "./patterns/Theming/Page";
-import Variants from "./patterns/Variants/Page";
+import ThemingPage from "./patterns/Theming/Page";
+import VariantsPage from "./patterns/Variants/Page";
+import HooksPage from "./patterns/Hooks/Page";
 
 class App extends React.Component {
   constructor() {
@@ -75,6 +76,9 @@ class App extends React.Component {
             <MenuItem link="/state-reducer" toggleMenu={this.toggleMenu}>
               5. State Reducer
             </MenuItem>
+            <MenuItem link="/hooks" toggleMenu={this.toggleMenu}>
+              5. Hooks
+            </MenuItem>
             <hr />
             <MenuItem link="/theming" toggleMenu={this.toggleMenu}>
               6. Theming
@@ -125,13 +129,14 @@ class App extends React.Component {
             />
             <Route path="/render-props" component={RenderPropsPage} />
             <Route path="/state-reducer" component={StateReducerPage} />
+            <Route path="/hooks" component={HooksPage} />
             <Route
               path="/compound-components"
               component={CompoundComponentsPage}
             />
             <Route path="/context" component={ContextPage} />
-            <Route path="/theming" component={Theming} />
-            <Route path="/variants" component={Variants} />
+            <Route path="/theming" component={ThemingPage} />
+            <Route path="/variants" component={VariantsPage} />
           </div>
         </div>
       </Root>

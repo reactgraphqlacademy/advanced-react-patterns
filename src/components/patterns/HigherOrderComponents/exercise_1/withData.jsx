@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 /*
   A higher-order component (HoC) is a function that:
@@ -10,28 +10,28 @@ const withData = () => {
     state = {
       data: undefined,
       loading: false,
-      error: undefined,
-    }
+      error: undefined
+    };
 
     componentDidMount = async () => {
-      this.setState({ loading: true })
+      this.setState({ loading: true });
       try {
-        const response = await fetch(this.props.url)
-        const data = await response.json()
-        this.setState({ data })
-      } catch(error) {
-        this.setState({ error: error.message })
+        const response = await fetch(this.props.url);
+        const data = await response.json();
+        this.setState({ data });
+      } catch (error) {
+        this.setState({ error: error.message });
       } finally {
-        this.setState({ loading: false })
+        this.setState({ loading: false });
       }
-    }
+    };
 
     render() {
       // you should return something here
     }
   }
 
-  return OuterComponent
-}
+  return OuterComponent;
+};
 
-export default withData
+export default withData;

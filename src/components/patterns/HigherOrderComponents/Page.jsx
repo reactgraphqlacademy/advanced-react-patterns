@@ -1,6 +1,6 @@
 import React from "react";
 import withMousePosition from "./example/withMousePosition";
-import List from "./exercise_1/List";
+import Exercise1 from "./exercise_1";
 import { connect } from "./exercise_bonus/connect";
 import {
   incrementAction,
@@ -63,8 +63,7 @@ const Page = ({ dispatch, ...props }) => (
         <code>src/components/questions/Question1/List.jsx</code>
       </li>
     </ul>
-    <p>Display a list of gists from https://api.github.com/gists/public</p>
-    <List url="https://api.github.com/gists/public?per_page=5" />
+    <Exercise1 />
     <div className="alert alert-warning">
       <h4>Pro-tip</h4>
       <p>
