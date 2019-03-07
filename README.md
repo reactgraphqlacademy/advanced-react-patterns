@@ -1,14 +1,22 @@
 # Advanced React Patterns
 
+Demo [https://advanced-react-patterns.reactjs.academy](https://advanced-react-patterns.reactjs.academy)
+
 This repo contains some exercises to help you learn the following advanced React Patterns:
 
 - Higher-Order Components (HoCs)
 - Render Callback
 - State Reducer
+- Hooks
 - Compound Components
 - Context
 - Theming
 - Style Variants
+
+You will also learn the following functional programming concepts:
+
+- Composition
+- Closure
 
 ## How to install
 
