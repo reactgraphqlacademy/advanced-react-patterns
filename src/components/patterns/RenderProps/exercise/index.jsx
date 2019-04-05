@@ -15,9 +15,7 @@ const Example = () => (
         the form fields have some state that changes. Threfore, it probably
         makes more sense to call it Field instead of Input.
       </p>
-      <p>
-        <h4>Task</h4>
-      </p>
+      <h4>Task</h4>
       <p>
         You need to edit this file{" "}
         <em>patterns/RenderProps/exercise/index.jsx</em> so:
@@ -52,13 +50,9 @@ const Example = () => (
         example. Check this file <em>patterns/RenderProps/example/index.jsx</em>
       </p>
       <p>
-        <select onChange={() => {}}>
-          <option selected={"value" === "red"} value="red">
-            Red
-          </option>
-          <option selected={"value" === "blue"} value="blue">
-            blue
-          </option>
+        <select onChange={() => {}} value="red">
+          <option value="red">Red</option>
+          <option value="blue">blue</option>
         </select>
       </p>
     </div>
