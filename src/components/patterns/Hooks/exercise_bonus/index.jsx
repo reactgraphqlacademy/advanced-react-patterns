@@ -1,5 +1,5 @@
 import React from "react";
-import WithWidth from "./WithWidth";
+import WithWidth, { LARGE, MEDIUM } from "./WithWidth";
 
 const Bonus = () => (
   <React.Fragment>
@@ -21,7 +21,24 @@ const Bonus = () => (
         https://reactjs.org/docs/hooks-custom.html
       </a>
     </p>
-    <WithWidth />
+    <WithWidth>
+      {width =>
+        width === LARGE ? (
+          <h1>I'm a large screen</h1>
+        ) : width === MEDIUM ? (
+          <h1>I'm a medium screen</h1>
+        ) : (
+          <h1>I'm a small screen</h1>
+        )
+      }
+    </WithWidth>
+    <br />
+    <h4>Part 3</h4>
+    <p>
+      Replace the withWidth HoC in{" "}
+      <code>src/components/patterns/CompoundComponents/Exercise/Menu</code> with
+      your custom hook <code>useWidth</code>.
+    </p>
   </React.Fragment>
 );
 
