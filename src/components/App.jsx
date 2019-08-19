@@ -14,7 +14,7 @@ import Menu from "./patterns/CompoundComponents/exercise/Menu";
 import Accordion from "./patterns/Context/exercise/components/Accordion";
 import CompositionPage from "./functional-programming/composition/Page";
 import ClosurePage from "./functional-programming/closure/Page";
-import StateReducerPage from "./patterns/StateReducer/Page";
+import HookReducerPage from "./patterns/HookReducer/Page";
 import ThemingPage from "./patterns/Theming/Page";
 import VariantsPage from "./patterns/Variants/Page";
 import HooksPage from "./patterns/Hooks/Page";
@@ -73,11 +73,11 @@ class App extends React.Component {
             <MenuItem link="/render-props" toggleMenu={this.toggleMenu}>
               4. Render Props
             </MenuItem>
-            <MenuItem link="/state-reducer" toggleMenu={this.toggleMenu}>
-              5. State Reducer
-            </MenuItem>
             <MenuItem link="/hooks" toggleMenu={this.toggleMenu}>
-              6. Hooks
+              5. Hooks
+            </MenuItem>
+            <MenuItem link="/hook-reducer" toggleMenu={this.toggleMenu}>
+              6. Hook Reducer
             </MenuItem>
             <hr />
             <MenuItem link="/theming" toggleMenu={this.toggleMenu}>
@@ -128,7 +128,7 @@ class App extends React.Component {
               component={HigherOrderComponentsPage}
             />
             <Route path="/render-props" component={RenderPropsPage} />
-            <Route path="/state-reducer" component={StateReducerPage} />
+            <Route path="/hook-reducer" component={HookReducerPage} />
             <Route path="/hooks" component={HooksPage} />
             <Route
               path="/compound-components"
