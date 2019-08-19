@@ -6,8 +6,8 @@ This repo contains some exercises to help you learn the following advanced React
 
 - Higher-Order Components (HoCs)
 - Render Callback
-- State Reducer
 - Hooks
+- Hook Reducer
 - Compound Components
 - Context
 - Theming
