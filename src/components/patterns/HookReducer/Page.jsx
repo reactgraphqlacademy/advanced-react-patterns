@@ -30,10 +30,6 @@ const Page = () => (
         argument.
       </li>
       <li>
-        Users can only type numbers for the User Id. Hint, the reducer should
-        not set the state if the userId value is not a number.
-      </li>
-      <li>
         Bonus, refactor the Hook Reducer so it's in a custom hook. You can call
         it useForm.
       </li>
