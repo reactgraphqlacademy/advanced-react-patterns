@@ -39,7 +39,7 @@ function LoginForm(props) {
       const errors = validate(state.values);
       // TODO  dispatch a SET_ERRORS action with the errors as payload
     }
-  }, []); // TODO dispatch the SET_ERRORS action when the state of inputs changes
+  }, []); // TODO dispatch the SET_ERRORS action only when the state of the input fields change.
 
   const handleChange = fieldName => event => {
     event.preventDefault();
