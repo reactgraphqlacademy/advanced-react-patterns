@@ -2,8 +2,8 @@ import React from "react";
 import useWidth, { LARGE, MEDIUM } from "./useWidth";
 
 const Bonus = () => {
-  const width = useWidth();
-  console.log("aa", width);
+  const width = 3;
+
   return (
     <React.Fragment>
       <h3>Exercise custom hooks</h3>
