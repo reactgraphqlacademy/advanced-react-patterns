@@ -18,9 +18,11 @@ function reducer(state, action) {
 }
 
 const LoginForm = props => {
-  const [state, dispatch] = React.useReducer(reducer, {
+  const initialState = {
     values: props.initialValues
-  });
+  };
+  // https://reactjs.org/docs/hooks-reference.html#usereducer
+  const [state, dispatch] = React.useReducer(reducer, initialState);
 
   const handleChange = fieldName => event => {
     event.preventDefault();
