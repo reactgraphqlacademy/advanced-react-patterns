@@ -36,14 +36,6 @@ const Bonus = () => {
       ) : (
         <h1>I'm a small screen</h1>
       )}
-
-      <br />
-      <h4>Part 2</h4>
-      <p>
-        Replace the withWidth HoC in{" "}
-        <code>src/components/patterns/CompoundComponents/Exercise/Menu</code>{" "}
-        with your custom hook <code>useWidth</code>.
-      </p>
     </React.Fragment>
   );
 };
