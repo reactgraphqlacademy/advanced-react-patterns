@@ -24,7 +24,6 @@ const LoginForm = props => {
 
   const handleChange = fieldName => event => {
     event.preventDefault();
-    event.persist();
     dispatch({
       type: SET_FIELD_VALUE,
       payload: { [fieldName]: event.target.value }
@@ -44,9 +43,9 @@ const LoginForm = props => {
   return (
     <form onSubmit={handleSubmit}>
       <label>
-        Email:
+        User Id:
         <br />
-        <input type="text" {...getFieldProps("email")} />
+        <input type="text" {...getFieldProps("userId")} />
       </label>
       <br />
       <label>
@@ -66,7 +65,7 @@ const Example = () => (
     <LoginForm
       initialValues={{
         password: "",
-        email: ""
+        userId: ""
       }}
     />
   </React.Fragment>
