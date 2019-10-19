@@ -43,7 +43,7 @@ function memoize(fn) {
   };
 }
 
-const memoizedDoWork = memoize(doHardWork);
+const memoizedDoWork = memoize(doEasyWork);
 memoizedDoWork(4000);
 memoizedDoWork(4000);
 
