@@ -94,20 +94,20 @@ class App extends React.Component {
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="https://twitter.com/reactjsacademy"
+                  href="https://twitter.com/reactgqlacademy"
                   className="btn-social btn-outline"
                 >
-                  <i className="fa fa-fw fa-twitter" /> @reactjsacademy
+                  <i className="fa fa-fw fa-twitter" /> @reactgqlacademy
                 </a>
               </li>
               <li>
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="https://www.instagram.com/reactjsacademy/"
+                  href="https://www.instagram.com/reactgraphqlacademy/"
                   className="btn-social btn-outline"
                 >
-                  <i className="fa fa-fw fa-instagram" /> @reactjsacademy
+                  <i className="fa fa-fw fa-instagram" /> @reactgraphqlacademy
                 </a>
               </li>
             </ul>
