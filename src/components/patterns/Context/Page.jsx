@@ -9,6 +9,7 @@ const Page = () => (
     <p>
       <a
         target="_blank"
+        rel="noopener noreferrer"
         href="https://github.com/reactjsacademy/advanced-react-patterns/tree/master/src/components/patterns/Context/example"
       >
         source code exercise branch &#187;
@@ -22,6 +23,7 @@ const Page = () => (
     <p>
       <a
         target="_blank"
+        rel="noopener noreferrer"
         href="https://github.com/reactjsacademy/advanced-react-patterns/tree/master/src/components/patterns/Context/exercise"
       >
         source code exercise branch &#187;
@@ -61,6 +63,7 @@ const Page = () => (
     <p>
       <a
         target="_blank"
+        rel="noopener noreferrer"
         href="https://github.com/reactjsacademy/advanced-react-patterns/tree/master/src/components/patterns/Context/xbonus"
       >
         source code exercise branch &#187;

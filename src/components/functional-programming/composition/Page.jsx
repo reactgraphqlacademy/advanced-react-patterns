@@ -12,6 +12,7 @@ const Page = () => (
     <p>
       <a
         target="_blank"
+        rel="noopener noreferrer"
         href="https://github.com/reactjsacademy/advanced-react-patterns/blob/master/src/components/functional-programming/composition/example/index.js"
       >
         source code exercise branch &#187;
@@ -26,6 +27,7 @@ const Page = () => (
     <p>
       <a
         target="_blank"
+        rel="noopener noreferrer"
         href="https://github.com/reactjsacademy/advanced-react-patterns/tree/master/src/components/functional-programming/composition/exercise"
       >
         source code exercise branch &#187;
@@ -45,6 +47,7 @@ const Page = () => (
       in the{" "}
       <a
         target="_blank"
+        rel="noopener noreferrer"
         href="https://github.com/reactjsacademy/reactjsacademy/blob/master/src/components/payment/checkout/CheckoutForm.js#L230"
       >
         source code

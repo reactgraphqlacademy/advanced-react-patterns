@@ -17,7 +17,7 @@ const List = ({ data = [], error, loading }) => {
       <ul className="issue-list">
         {data.map(item => (
           <li key={item.id}>
-            <a href={item.html_url} target="_blank">
+            <a href={item.html_url} rel="noopener noreferrer" target="_blank">
               <img
                 alt={item.owner.login}
                 src={item.owner.avatar_url}

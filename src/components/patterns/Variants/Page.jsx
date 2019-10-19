@@ -14,6 +14,7 @@ const Page = props => (
     <p>
       <a
         target="_blank"
+        rel="noopener noreferrer"
         href="https://github.com/reactjsacademy/advanced-react-patterns/tree/master/src/components/patterns/Variants/example"
       >
         source code exercise branch &#187;
@@ -29,6 +30,7 @@ const Page = props => (
     <p>
       <a
         target="_blank"
+        rel="noopener noreferrer"
         href="https://github.com/reactjsacademy/advanced-react-patterns/tree/master/src/components/patterns/Variants/exercise"
       >
         source code exercise branch &#187;
@@ -47,12 +49,19 @@ const Page = props => (
       <li>error</li>
     </ul>
     <Exercise />
-    <hr/>
+    <hr />
     <h3>Bonus</h3>
-    <p>now let's try to embrace more tools from <code>styled-system</code>. the new things we are going to cover as a demo are:</p>
+    <p>
+      now let's try to embrace more tools from <code>styled-system</code>. the
+      new things we are going to cover as a demo are:
+    </p>
     <ul>
-      <li><code>styled-system</code> utilities like <code>space</code></li>
-      <li>the use of the prop <code>as</code> from styled-components</li>
+      <li>
+        <code>styled-system</code> utilities like <code>space</code>
+      </li>
+      <li>
+        the use of the prop <code>as</code> from styled-components
+      </li>
       <li>mix all with your theme</li>
     </ul>
   </div>

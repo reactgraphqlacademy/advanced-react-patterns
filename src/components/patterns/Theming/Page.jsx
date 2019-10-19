@@ -23,6 +23,7 @@ const Page = props => (
     <p>
       <a
         target="_blank"
+        rel="noopener noreferrer"
         href="https://github.com/reactjsacademy/advanced-react-patterns/tree/master/src/components/patterns/Theming/example"
       >
         source code exercise branch &#187;
@@ -34,6 +35,7 @@ const Page = props => (
     <p>
       <a
         target="_blank"
+        rel="noopener noreferrer"
         href="https://github.com/reactjsacademy/advanced-react-patterns/tree/master/src/components/patterns/Theming/exercise"
       >
         source code exercise branch &#187;

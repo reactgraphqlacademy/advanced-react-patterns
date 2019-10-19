@@ -10,6 +10,7 @@ const Page = () => (
     <p>
       <a
         target="_blank"
+        rel="noopener noreferrer"
         href="https://github.com/reactjsacademy/advanced-react-patterns/tree/master/src/components/patterns/CompoundComponents/example"
       >
         source code exercise branch &#187;
@@ -50,6 +51,7 @@ const Page = () => (
     <p>
       <a
         target="_blank"
+        rel="noopener noreferrer"
         href="https://github.com/reactjsacademy/advanced-react-patterns/tree/master/src/components/patterns/CompoundComponents/exercise"
       >
         source code exercise branch &#187;

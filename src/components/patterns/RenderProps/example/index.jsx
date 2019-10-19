@@ -9,6 +9,7 @@ const Example = () => (
       <p>
         <a
           target="_blank"
+          rel="noopener noreferrer"
           href="https://github.com/reactjsacademy/advanced-react-patterns/blob/master/src/components/patterns/RenderProps/example/Input.jsx"
         >
           source code exercise branch &#187;

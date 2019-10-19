@@ -14,6 +14,7 @@ const Page = ({ dispatch, ...props }) => (
     <p>
       <a
         target="_blank"
+        rel="noopener noreferrer"
         href="https://github.com/reactjsacademy/advanced-react-patterns/blob/master/src/components/patterns/HigherOrderComponents/example/withMousePosition.jsx"
       >
         source code exercise branch &#187;
@@ -38,6 +39,7 @@ const Page = ({ dispatch, ...props }) => (
     <p>
       <a
         target="_blank"
+        rel="noopener noreferrer"
         href="https://github.com/reactjsacademy/advanced-react-patterns/tree/master/src/components/patterns/HigherOrderComponents/exercise_1"
       >
         source code exercise branch &#187;
@@ -89,6 +91,7 @@ const Page = ({ dispatch, ...props }) => (
     <p>
       <a
         target="_blank"
+        rel="noopener noreferrer"
         href="https://github.com/reactjsacademy/advanced-react-patterns/blob/master/src/components/patterns/HigherOrderComponents/exercise_2/withWidth.jsx"
       >
         source code exercise branch &#187;
@@ -154,6 +157,7 @@ const Page = ({ dispatch, ...props }) => (
     <p>
       <a
         target="_blank"
+        rel="noopener noreferrer"
         href="https://github.com/reactjsacademy/advanced-react-patterns/tree/master/src/components/patterns/HigherOrderComponents/exercise_bonus"
       >
         source code exercise branch &#187;

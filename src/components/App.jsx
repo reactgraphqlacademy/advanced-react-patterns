@@ -14,6 +14,7 @@ import Menu from "./patterns/CompoundComponents/exercise/Menu";
 import Accordion from "./patterns/Context/exercise/components/Accordion";
 import CompositionPage from "./functional-programming/composition/Page";
 import ClosurePage from "./functional-programming/closure/Page";
+import MemoizationPage from "./functional-programming/memoization/Page";
 import HookReducerPage from "./patterns/HookReducer/Page";
 import ThemingPage from "./patterns/Theming/Page";
 import VariantsPage from "./patterns/Variants/Page";
@@ -60,15 +61,18 @@ class App extends React.Component {
             <MenuItem link="/closure" toggleMenu={this.toggleMenu}>
               1. Closure
             </MenuItem>
+            <MenuItem link="/memoization" toggleMenu={this.toggleMenu}>
+              2. Memoization
+            </MenuItem>
             <MenuItem link="/composition" toggleMenu={this.toggleMenu}>
-              2. Function composition
+              3. Function composition
             </MenuItem>
             <hr />
             <MenuItem
               link="/higher-order-components"
               toggleMenu={this.toggleMenu}
             >
-              3. Higher-Order Components
+              4. Higher-Order Components
             </MenuItem>
             <MenuItem link="/render-props" toggleMenu={this.toggleMenu}>
               4. Render Props
@@ -79,20 +83,9 @@ class App extends React.Component {
             <MenuItem link="/hook-reducer" toggleMenu={this.toggleMenu}>
               6. Hook Reducer
             </MenuItem>
-            <hr />
-            <MenuItem link="/theming" toggleMenu={this.toggleMenu}>
-              7. Theming
-            </MenuItem>
-            <MenuItem link="/variants" toggleMenu={this.toggleMenu}>
-              8. Variants
-            </MenuItem>
-            <hr />
-            <MenuItem link="/compound-components" toggleMenu={this.toggleMenu}>
-              9. Compound Components
-            </MenuItem>
             <Accordion>
               <MenuItem link="/context" toggleMenu={this.toggleMenu}>
-                10. Context
+                7. Context
               </MenuItem>
             </Accordion>
             <hr />
@@ -122,6 +115,7 @@ class App extends React.Component {
           <div style={styles} className="view-container">
             <Route exact path="/" render={() => <Redirect to="/closure" />} />
             <Route path="/composition" component={CompositionPage} />
+            <Route path="/memoization" component={MemoizationPage} />
             <Route path="/closure" component={ClosurePage} />
             <Route
               path="/higher-order-components"

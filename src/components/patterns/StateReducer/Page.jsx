@@ -20,6 +20,7 @@ const Page = () => (
     <p>
       <a
         target="_blank"
+        rel="noopener noreferrer"
         href="https://github.com/reactjsacademy/advanced-react-patterns/tree/master/src/components/patterns/StateReducer/example"
       >
         source code exercise branch &#187;
@@ -31,6 +32,7 @@ const Page = () => (
     <p>
       <a
         target="_blank"
+        rel="noopener noreferrer"
         href="https://github.com/reactjsacademy/advanced-react-patterns/tree/master/src/components/patterns/StateReducer/exercise_1"
       >
         source code exercise branch &#187;
@@ -42,6 +44,7 @@ const Page = () => (
     <p>
       <a
         target="_blank"
+        rel="noopener noreferrer"
         href="https://github.com/reactjsacademy/advanced-react-patterns/tree/master/src/components/patterns/StateReducer/exercise_2"
       >
         source code exercise branch &#187;
@@ -53,6 +56,7 @@ const Page = () => (
     <p>
       <a
         target="_blank"
+        rel="noopener noreferrer"
         href="https://github.com/reactjsacademy/advanced-react-patterns/tree/master/src/components/patterns/StateReducer/exercise_3"
       >
         source code exercise branch &#187;
@@ -64,6 +68,7 @@ const Page = () => (
     <p>
       <a
         target="_blank"
+        rel="noopener noreferrer"
         href="https://github.com/reactjsacademy/advanced-react-patterns/tree/master/src/components/patterns/StateReducer/exercise_bonus"
       >
         source code exercise branch &#187;

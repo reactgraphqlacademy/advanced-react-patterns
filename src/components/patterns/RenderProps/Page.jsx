@@ -14,6 +14,7 @@ const Page = props => (
     <p>
       <a
         target="_blank"
+        rel="noopener noreferrer"
         href="https://github.com/reactjsacademy/advanced-react-patterns/tree/master/src/components/patterns/RenderProps/exercise"
       >
         source code exercise branch &#187;
