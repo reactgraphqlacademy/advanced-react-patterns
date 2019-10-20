@@ -11,7 +11,6 @@ import CompoundComponentsPage from "./patterns/CompoundComponents/Page";
 import ContextPage from "./patterns/Context/Page";
 import MenuItem from "./patterns/CompoundComponents/exercise/MenuItem";
 import Menu from "./patterns/CompoundComponents/exercise/Menu";
-import Accordion from "./patterns/Context/exercise/components/Accordion";
 import CompositionPage from "./functional-programming/composition/Page";
 import ClosurePage from "./functional-programming/closure/Page";
 import MemoizationPage from "./functional-programming/memoization/Page";
@@ -83,11 +82,9 @@ class App extends React.Component {
             <MenuItem link="/hook-reducer" toggleMenu={this.toggleMenu}>
               6. Hook Reducer
             </MenuItem>
-            <Accordion>
-              <MenuItem link="/context" toggleMenu={this.toggleMenu}>
-                7. Context
-              </MenuItem>
-            </Accordion>
+            <MenuItem link="/context" toggleMenu={this.toggleMenu}>
+              7. Context
+            </MenuItem>
             <hr />
             <ul className="list-unstyled">
               <li>

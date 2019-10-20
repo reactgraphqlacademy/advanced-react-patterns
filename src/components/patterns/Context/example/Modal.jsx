@@ -1,52 +1,31 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Modal as BootstrapModal } from 'react-bootstrap'
+import React from "react";
+import { Modal as BootstrapModal } from "react-bootstrap";
 
-export const ModalContext = React.createContext()
+const ModalContext = React.createContext();
 
-class Modal extends React.Component {
-  constructor () {
-    super()
+const Modal = ({ children }) => {
+  const [modalChildren, displayModal] = React.useState(null);
+  const hideModal = () => displayModal(null);
+  const isOpen = !!modalChildren;
 
-    this.state = {
-      isOpen: false,
-      content: null,
-      backdrop: true
-    }
+  return (
+    <ModalContext.Provider value={{ isOpen, displayModal, hideModal }}>
+      <BootstrapModal backdrop={true} show={isOpen} onHide={hideModal}>
+        {modalChildren}
+      </BootstrapModal>
+      {children}
+    </ModalContext.Provider>
+  );
+};
+
+export const useModal = () => {
+  const context = React.useContext(ModalContext);
+
+  if (context === undefined) {
+    throw new Error("useModal must be used within a ModalProvider");
   }
 
-  showModal = (content, backdrop = true) => {
-    this.setState({
-      content,
-      isOpen: true,
-      backdrop
-    })
-  }
+  return context;
+};
 
-  hideModal = () => {
-    this.setState({ isOpen: false })
-  }
-
-  render () {
-    const { showModal, hideModal, state, props } = this
-
-    return (
-      <ModalContext.Provider value={{ ...state, showModal, hideModal }}>
-        <BootstrapModal
-          backdrop={ state.backdrop }
-          show={ state.isOpen }
-          onHide={ hideModal }
-        >
-          { state.content }
-        </BootstrapModal>
-        { props.children }
-      </ModalContext.Provider>
-    )
-  }
-}
-
-Modal.propTypes = {
-  children: PropTypes.object
-}
-
-export default Modal
+export default Modal;
