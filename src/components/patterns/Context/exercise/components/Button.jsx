@@ -10,15 +10,10 @@ const StyledButton = styled.button`
   background-color: black;
 `;
 
-const Button = ({ children, ...rest }) => {
-  // TODO 4, use the useTheme in the Button.jsx component in this folder
-  const { toggleTheme } = () => console.log("BUTTON CLICKED!");
-
-  return (
-    <StyledButton onClick={toggleTheme} {...rest}>
-      {children}
-    </StyledButton>
-  );
-};
+const Button = ({ onClick, children, ...rest }) => (
+  <StyledButton onClick={onClick} {...rest}>
+    {children}
+  </StyledButton>
+);
 
 export default Button;

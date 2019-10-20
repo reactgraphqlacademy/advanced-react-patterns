@@ -15,6 +15,6 @@ export const ThemeProvider = ({ children }) => {
 // TODO 3, implement the useTheme and share the context like the example useModal
 export const useTheme = () => {};
 
-// TODO 4, use the useTheme in the Button.jsx component in this folder
+// TODO 4, use the useTheme in the App.jsx component in this folder
 
 export default ThemeProvider;
