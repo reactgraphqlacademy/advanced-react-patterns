@@ -47,16 +47,7 @@ class WithWidth extends React.Component {
   }
 
   render() {
-    switch (this.state.width) {
-      case LARGE:
-        return <h1>I'm a large screen</h1>;
-      case MEDIUM:
-        return <h1>I'm a medium screen</h1>;
-      case SMALL:
-        return <h1>I'm a small screen</h1>;
-      default:
-        null;
-    }
+    return this.state.width;
   }
 }
 
