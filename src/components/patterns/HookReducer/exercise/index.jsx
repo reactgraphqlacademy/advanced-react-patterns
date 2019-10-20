@@ -41,6 +41,7 @@ function LoginForm(props) {
     }
   }, []); // TODO dispatch the SET_ERRORS action only when the state of the input fields change.
 
+  // This is a function that returns another function so it creates a closure to capture fieldName
   const handleChange = fieldName => event => {
     event.preventDefault();
     dispatch({
@@ -59,7 +60,7 @@ function LoginForm(props) {
 
   const getFieldProps = fieldName => ({
     value: state.values[fieldName],
-    onChange: handleChange(fieldName)
+    onChange: handleChange(fieldName) // fieldName gets captured in the handleChange closure
   });
 
   const { errors } = state;
