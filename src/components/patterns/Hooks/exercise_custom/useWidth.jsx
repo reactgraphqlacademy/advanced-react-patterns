@@ -14,7 +14,7 @@ class WithWidth extends React.Component {
   }
 
   componentDidMount() {
-    if (window) {
+   if (typeof window !== "undefined"){
       window.addEventListener("resize", this.handleResize);
       this.handleResize();
     }
