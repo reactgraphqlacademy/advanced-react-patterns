@@ -6,10 +6,12 @@ You should see on the console the console.log() for this exercise.
 
 1. Pair up and explain to each other how the memoize function works with the doEasyWork function.
 
-2. Explain to each other how the memoize function works with doHardWork.
+2. Where is the closure?
+
+3. Explain to each other how the memoize function works with doHardWork.
    Does the memoize function work differently?
 
-3. Bonus, refactor the memoize function so it can memoize functions with any number of arguments-
+4. Bonus, refactor the memoize function so it can memoize functions with any number of arguments-
    You can use the function doAnyWork to test your refactored memoize function
 */
 
