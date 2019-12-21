@@ -1,5 +1,6 @@
 import React from "react";
 
+// Using a reducer helps separate reads, from writes
 function reducer(state, action) {
   switch (action.type) {
     // TODO add a SET_ERRORS case that adds an erros key to the state with the action.payload
