@@ -25,6 +25,12 @@ You will also learn the following functional programming concepts:
 - `npm i`
 - `npm start`
 
+
+# Links
+
+- [https://github.com/reactjs/react-basic#composition](https://github.com/reactjs/react-basic#composition)
+- [https://github.com/reactjs/react-basic#memoization](https://github.com/reactjs/react-basic#memoization)
+
 ## License
 
 This material is available for private, non-commercial use under the [GPL version 3](http://www.gnu.org/licenses/gpl-3.0-standalone.html).
