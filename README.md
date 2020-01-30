@@ -28,6 +28,7 @@ You will also learn the following functional programming concepts:
 
 # Links
 
+- [Lecture: React Patterns](https://reactgraphql.academy/react/react-is-all-about-composition-react-hooks-render-props-hocs/)
 - [https://github.com/reactjs/react-basic#composition](https://github.com/reactjs/react-basic#composition)
 - [https://github.com/reactjs/react-basic#memoization](https://github.com/reactjs/react-basic#memoization)
 
