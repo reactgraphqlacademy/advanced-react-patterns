@@ -17,8 +17,15 @@ const Bonus = () => {
         <code>useState</code> and <code>useEffect</code> Hooks.
       </p>
       <p>
-        Tip: to remove the event listeners we need to use the clean up phase of
-        the effect. To clean up the side effects you must return a function.
+        Tip: to remove the event listeners we need to use the{" "}
+        <a
+          href="https://reactjs.org/docs/hooks-effect.html#effects-with-cleanup"
+          target="_blank"
+        >
+          {" "}
+          cleanup phase
+        </a>{" "}
+        of the effect. To clean up the side effects you must return a function.
       </p>
       <p>
         Documentation about custom hooks{" "}
@@ -26,9 +33,11 @@ const Bonus = () => {
           https://reactjs.org/docs/hooks-custom.html
         </a>
       </p>
+      <h4>Part 2</h4>
       <p>
-        Import your useWidth and replace the hardcoded{" "}
-        <code>const width = 3</code> at the top with{" "}
+        import your useWidth in{" "}
+        <code>src/patterns/Hooks/exercise_custom/index.jsx</code> and replace
+        the &lt;Width /&gt; component with the width from
         <code>const width = useWidth()</code>
       </p>
 
