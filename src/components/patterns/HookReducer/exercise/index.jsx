@@ -1,16 +1,16 @@
 import React from "react";
 
-// Using a reducer helps separate reads, from writes
 function reducer(state, action) {
   switch (action.type) {
-    // TODO add a SET_ERRORS case that adds an erros key to the state with the action.payload
+    // 🚧 Add a SET_ERRORS case that adds an errors key to the state with the action.payload
+    // 🕵️‍♀️ You probably want to clear previous errors every time you do SET_ERRORS
     case "SET_FIELD_VALUE":
       return {
         ...state,
         values: {
           ...state.values,
-          ...action.payload
-        }
+          ...action.payload,
+        },
       };
     default:
       return state;
@@ -19,7 +19,8 @@ function reducer(state, action) {
 
 function LoginForm(props) {
   const { initialValues, onSubmit } = props;
-  const validate = values => {
+  // 👮‍♀you don't have to edit this validate function
+  const validate = (values) => {
     let errors = {};
     if (!values.password) {
       errors.password = "Password is required";
@@ -32,26 +33,25 @@ function LoginForm(props) {
 
   const [state, dispatch] = React.useReducer(reducer, {
     values: initialValues,
-    errors: {}
+    errors: {},
   });
 
   React.useEffect(() => {
     if (validate) {
       const errors = validate(state.values);
-      // TODO  dispatch a SET_ERRORS action with the errors as payload
+      // 🚧 dispatch a SET_ERRORS action with the errors as payload
     }
-  }, []); // TODO dispatch the SET_ERRORS action only when the state of the input fields change.
+  }, []); // 🚧 dispatch the SET_ERRORS action only when the state of the input fields change.
 
-  // This is a function that returns another function so it creates a closure to capture fieldName
-  const handleChange = fieldName => event => {
+  const handleChange = (fieldName) => (event) => {
     event.preventDefault();
     dispatch({
       type: "SET_FIELD_VALUE",
-      payload: { [fieldName]: event.target.value }
+      payload: { [fieldName]: event.target.value },
     });
   };
 
-  const handleSubmit = event => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     const errors = validate(state.values);
     if (!Object.keys(errors).length) {
@@ -59,9 +59,9 @@ function LoginForm(props) {
     }
   };
 
-  const getFieldProps = fieldName => ({
+  const getFieldProps = (fieldName) => ({
     value: state.values[fieldName],
-    onChange: handleChange(fieldName) // fieldName gets captured in the handleChange closure
+    onChange: handleChange(fieldName),
   });
 
   const { errors } = state;
@@ -95,9 +95,9 @@ const Exercise = () => (
     <LoginForm
       initialValues={{
         password: "",
-        userId: ""
+        userId: "",
       }}
-      onSubmit={values => {
+      onSubmit={(values) => {
         alert(JSON.stringify(values, null, 2));
       }}
     />

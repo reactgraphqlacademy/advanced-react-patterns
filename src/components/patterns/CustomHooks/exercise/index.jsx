@@ -10,7 +10,7 @@ const Bonus = () => {
       <h3>🏋️‍♀️Exercise</h3>
       <h4>
         🎯 The goal is to extract some component logic into a reusable function
-        avoiding pitfalls
+        avoiding common pitfalls
       </h4>
 
       <h1>
