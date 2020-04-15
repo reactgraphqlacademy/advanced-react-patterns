@@ -3,7 +3,7 @@ import { Route, Redirect } from "react-router-dom";
 
 import Root from "./Root";
 import withWidth, {
-  LARGE
+  LARGE,
 } from "./patterns/HigherOrderComponents/exercise_2/withWidth";
 import HigherOrderComponentsPage from "./patterns/HigherOrderComponents/Page";
 import RenderPropsPage from "./patterns/RenderProps/Page";
@@ -15,15 +15,17 @@ import CompositionPage from "./functional-programming/composition/Page";
 import ClosurePage from "./functional-programming/closure/Page";
 import MemoizationPage from "./functional-programming/memoization/Page";
 import HookReducerPage from "./patterns/HookReducer/Page";
+import CustomHooksPage from "./patterns/CustomHooks/Page";
 import ThemingPage from "./patterns/Theming/Page";
 import VariantsPage from "./patterns/Variants/Page";
 import HooksPage from "./patterns/Hooks/Page";
+import RGALogo from "./RGALogo";
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      menu: { open: false }
+      menu: { open: false },
     };
   }
 
@@ -37,7 +39,7 @@ class App extends React.Component {
     let isMenuOpen = this.state.menu.open;
     const styles = {
       paddingRight: "20px",
-      paddingLeft: "20px"
+      paddingLeft: "20px",
     };
 
     if (this.props.width === LARGE) {
@@ -50,10 +52,8 @@ class App extends React.Component {
         <div id="page-wrap">
           <Menu isOpen={isMenuOpen} toggleMenu={this.toggleMenu}>
             <p className="text-center">
-              <a href="https://reactjs.academy">
-                <img alt="ReactJS Academy" src="/logo.png" />
-                <br />
-                ReactJS.Academy
+              <a target="_blank" href="https://reactgraphql.academy">
+                <RGALogo />
               </a>
             </p>
             <hr />
@@ -74,16 +74,19 @@ class App extends React.Component {
               4. Higher-Order Components
             </MenuItem>
             <MenuItem link="/render-props" toggleMenu={this.toggleMenu}>
-              4. Render Props
+              5. Render Props
             </MenuItem>
             <MenuItem link="/hooks" toggleMenu={this.toggleMenu}>
-              5. Hooks
+              6. Hooks
+            </MenuItem>
+            <MenuItem link="/custom-hooks" toggleMenu={this.toggleMenu}>
+              7. Custom Hooks
             </MenuItem>
             <MenuItem link="/hook-reducer" toggleMenu={this.toggleMenu}>
-              6. Hook Reducer
+              8. Hook Reducer
             </MenuItem>
             <MenuItem link="/context" toggleMenu={this.toggleMenu}>
-              7. Context
+              9. Context
             </MenuItem>
             <hr />
             <ul className="list-unstyled">
@@ -121,6 +124,7 @@ class App extends React.Component {
             <Route path="/render-props" component={RenderPropsPage} />
             <Route path="/hook-reducer" component={HookReducerPage} />
             <Route path="/hooks" component={HooksPage} />
+            <Route path="/custom-hooks" component={CustomHooksPage} />
             <Route
               path="/compound-components"
               component={CompoundComponentsPage}

@@ -1,5 +1,22 @@
-html, body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;800&display=swap");
+
+html,
+body {
+  font-family: "Barlow", sans-serif;
+  font-size: 16px;
+  padding-bottom: 25px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 800;
+}
+h3,
+h4 {
+  padding: 10px 0;
 }
 
 #page-wrap > div:first-child {
@@ -18,7 +35,7 @@ html, body {
   cursor: pointer;
 }
 
-.view-container{
+.view-container {
   -webkit-transition: padding 0.5s;
   -moz-transition: padding 0.5s;
   -o-transition: padding 0.5s;
@@ -57,17 +74,25 @@ html, body {
 
 /* General sidebar styles */
 .bm-menu {
-  background: #202020;
+  background: #1f4653;
   padding: 2.5em 2em 0 1.5em;
   font-size: 1.15em;
 }
 
-.bm-menu h3{
+.bm-menu a,
+.bm-menu a:link,
+.bm-menu a:visited,
+.bm-menu a:hover,
+.bm-menu a:active {
+  color: white;
+}
+
+.bm-menu h3 {
   margin-top: 0;
 }
 
 #outer-container {
-  position:relative;
+  position: relative;
 }
 
 .bm-menu-wrap {
@@ -109,7 +134,7 @@ html, body {
 .issue-list li {
   display: block;
   text-decoration: none;
-  border-top: '1px solid #aaa';
+  border-top: "1px solid #aaa";
   padding: 10;
 }
 

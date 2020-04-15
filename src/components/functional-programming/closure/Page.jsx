@@ -17,7 +17,7 @@ const Page = () => (
     </p>
     <h3>Discussion about the solution</h3>
     <p>1- Is the inner function pure?</p>
-    <p>2- Wnat is executed first, the inner of the outer function?</p>
+    <p>2- What's executed first, the inner function or the outer function?</p>
   </React.Fragment>
 );
 

@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 class RandomImage extends React.Component {
   state = {
-    imageUrl: undefined
+    imageUrl: undefined,
   };
 
   componentDidMount = () => {
