@@ -1,4 +1,4 @@
-import React from "react";
+import { useState, useEffect, useCallback } from "react";
 
 export const SMALL = 1;
 export const MEDIUM = 2;
@@ -7,49 +7,45 @@ export const LARGE = 3;
 const largeWidth = 992,
   mediumWidth = 768;
 
-class WithWidth extends React.Component {
-  constructor() {
-    super();
-    this.state = { width: this.windowWidth() };
+const windowWidth = () => {
+  let innerWidth = 0;
+  let width;
+  if (window) innerWidth = window.innerWidth;
+
+  if (innerWidth >= largeWidth) {
+    width = LARGE;
+  } else if (innerWidth >= mediumWidth) {
+    width = MEDIUM;
+  } else {
+    width = SMALL;
   }
 
-  componentDidMount() {
-    if (typeof window !== "undefined") {
-      window.addEventListener("resize", this.handleResize);
-      this.handleResize();
+  return width;
+};
+
+const useWidth = () => {
+  const [width, setWidth] = useState(null);
+
+  const handleResize = () => {
+    let currentWidth = windowWidth();
+    if (currentWidth !== width) {
+      setWidth(currentWidth);
     }
-  }
-
-  componentWillUnmount() {
-    if (typeof window !== "undefined")
-      window.removeEventListener("resize", this.handleResize);
-  }
-
-  handleResize = () => {
-    let width = this.windowWidth();
-    if (width !== this.state.width) this.setState({ width });
   };
 
-  windowWidth() {
-    let innerWidth = 0;
-    let width;
-    if (window) innerWidth = window.innerWidth;
+  const handleResizeCallback = useCallback(handleResize, []);
 
-    if (innerWidth >= largeWidth) {
-      width = LARGE;
-    } else if (innerWidth >= mediumWidth) {
-      width = MEDIUM;
-    } else {
-      // innerWidth < 768
-      width = SMALL;
+  useEffect(() => {
+    if (window) {
+      window.addEventListener("resize", handleResizeCallback);
+      handleResizeCallback();
     }
+    return () => {
+      if (window) window.removeEventListener("resize", handleResizeCallback);
+    };
+  }, [handleResizeCallback]);
 
-    return width;
-  }
+  return width;
+};
 
-  render() {
-    return this.state.width;
-  }
-}
-
-export default WithWidth;
+export default useWidth;

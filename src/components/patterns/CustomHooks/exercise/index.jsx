@@ -1,10 +1,10 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
 import React from "react";
-// import useWidth, { LARGE, MEDIUM } from "./useWidth";
-// remove the following import after refactoring the Width component to a custom hook
-import Width from "./useWidth";
+import useWidth from "./useWidth";
 
 const Bonus = () => {
+  const width = useWidth();
+
   return (
     <React.Fragment>
       <hr />
@@ -14,12 +14,7 @@ const Bonus = () => {
         avoiding common pitfalls
       </h4>
 
-      <h1>
-        {/* Comment out the following <Width /> after implementing part 1 */}
-        The width is: <Width />
-        {/* Use the width value from your custom hook in the next line after you implment part 1  */}
-        {/* {width} */}
-      </h1>
+      <h1>{width}</h1>
 
       <h4>Part 1, refactoring</h4>
 

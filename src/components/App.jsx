@@ -2,9 +2,7 @@ import React from "react";
 import { Route, Redirect } from "react-router-dom";
 
 import Root from "./Root";
-import withWidth, {
-  LARGE,
-} from "./patterns/HigherOrderComponents/exercise_2/withWidth";
+import useWidth, { LARGE } from "./patterns/CustomHooks/exercise/useWidth";
 import HigherOrderComponentsPage from "./patterns/HigherOrderComponents/Page";
 import RenderPropsPage from "./patterns/RenderProps/Page";
 import CompoundComponentsPage from "./patterns/CompoundComponents/Page";
@@ -142,5 +140,11 @@ class App extends React.Component {
     );
   }
 }
+
+const withWidth = (Component) => (props) => {
+  const width = useWidth();
+
+  return <Component {...props} width={width} />;
+};
 
 export default withWidth(App);
