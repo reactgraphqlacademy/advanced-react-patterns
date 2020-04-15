@@ -1,22 +1,29 @@
 # Advanced React Patterns
 
-Demo [https://advanced-react-patterns.reactjs.academy](https://advanced-react-patterns.reactjs.academy)
+## Teaching method
 
-This repo contains some exercises to help you learn the following advanced React Patterns:
+1. Collaborative learning environment & pair programming.
+   - Rooms with small groups
+   - Work together, discuss, help each other.
+2. We try to foster critical thinking.
+   - ⬆️ Discovery ⬇️ Instruction
+3. We don’t explain everything you need to know before the exercise:
+   - Learn by doing (and teaching ;)
+   - The exercise is meant to help you build a mental model
 
-- Higher-Order Components (HoCs)
-- Render Callback
-- Hooks
-- Hook Reducer
-- Compound Components
-- Context
-- Theming
-- Style Variants
+More on the [teaching method](https://reactgraphql.academy/blog/react-graphql-academy-teaching-method/)
 
-You will also learn the following functional programming concepts:
+## Target audience:
 
-- Composition
-- Closure
+reactDevs >= 6 months && reactDevs <= 2 years
+
+## Advanced React patterns
+
+This workshop doesn't define "advanced" as doing complicated things that you haven't done or seen before, but:
+
+1. Understanding how things work, not just "doing".
+2. Using those things properly and when necessary.
+3. Making complicated things simple, not the other way around.
 
 ## How to install
 
@@ -24,7 +31,6 @@ You will also learn the following functional programming concepts:
 - `cd advanced-react-patterns`
 - `npm i`
 - `npm start`
-
 
 # Links
 
