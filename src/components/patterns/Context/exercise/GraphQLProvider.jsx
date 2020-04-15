@@ -1,11 +1,13 @@
 import React, { useReducer, useContext, useEffect } from "react";
-import { memoize, hashGql, createClient } from "./utils";
+import { memoize, hashGql } from "./utils";
 
 const RECEIVE_DATA = "RECEIVE_DATA";
 const SET_ERROR = "SET_ERROR";
 
 export const StoreContext = React.createContext();
-// 🚧 1.1 Create a context for the data fetching client
+export const CacheContext = React.createContext();
+export const DispatchGQLContext = React.createContext();
+export const ClientContext = React.createContext();
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -25,6 +27,7 @@ const reducer = (state, action) => {
 
 export const GraphQLProvider = ({
   children,
+  client,
   initialState = {
     data: {},
     error: null,
@@ -33,22 +36,24 @@ export const GraphQLProvider = ({
 }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  // 🚧 Part 1.2. Add your ClientProvider inside the return
   return (
-    <StoreContext.Provider value={[state, dispatch]}>
-      {children}
-    </StoreContext.Provider>
+    <ClientContext.Provider value={{ client }}>
+      <DispatchGQLContext.Provider value={{ dispatch }}>
+        <CacheContext.Provider value={{ state }}>
+          {children}
+        </CacheContext.Provider>
+      </DispatchGQLContext.Provider>
+    </ClientContext.Provider>
   );
 };
 
-// 🚧 Bonus exercise, should we use useMemo for this memoized function? Why?
+// 🚧 Should we use useMemo for this memoized function? Why?
 const memoizedHashGql = memoize(hashGql);
 
 export const useQuery = (query, { variables }) => {
-  // 🚧 1.3. Use the client from the context, instead of this hardcoded implementation. You can create a handy useClient custom hook (almost implemented at the end of the file).
-  // Why moving the client to the context? For testing. E.g. https://www.apollographql.com/docs/react/development-testing/testing/#mockedprovider
-  const client = createClient({ url: "https://rickandmortyapi.com/graphql/" });
-  const [state, dispatch] = useContext(StoreContext);
+  const { client } = useClient();
+  const { state } = useGQLCache(CacheContext);
+  const { dispatch } = useGQLDispatch();
   const { loading, error, data: cache } = state;
   const cacheKey = memoizedHashGql(query, variables);
   const data = cache && cache[cacheKey];
@@ -72,13 +77,31 @@ export const useQuery = (query, { variables }) => {
           error,
         })
       );
-  }, [query, cacheKey, variables, dispatch, data]);
+  }, [query, cacheKey, variables, dispatch, data]); // do I need dispatch here if it comes from useReducer?
 
   return { data, loading, error };
 };
 
+export const useGQLDispatch = () => {
+  const { dispatch } = useContext(DispatchGQLContext) || {};
+  if (!dispatch) {
+    throw new Error("No DispatchGQLContext found!");
+  }
+
+  return { dispatch };
+};
+
+export const useGQLCache = () => {
+  const { state } = useContext(CacheContext) || {};
+  if (!state) {
+    throw new Error("No CacheContext found!");
+  }
+
+  return { state };
+};
+
 export const useClient = () => {
-  const client = null; // 🚧 get the client from the context here
+  const { client } = useContext(ClientContext) || {};
   if (!client) {
     throw new Error(
       "No GraphQL client found, please make sure that you are providing a client prop to the GraphQL Provider"
