@@ -53,3 +53,5 @@ memoizedDoWork(4000);
 // const memoizedDoWork = memoize(doAnyWork);
 // console.log(`[memoization exercise] ${memoizedDoWork(1, 2, 3)} === 6 ?`);
 // console.log(`[memoization exercise] ${memoizedDoWork(1, 50, 104)} === 155 ?`);
+
+// Bonus 2, extract the key cache functionality to a "resolver" function
