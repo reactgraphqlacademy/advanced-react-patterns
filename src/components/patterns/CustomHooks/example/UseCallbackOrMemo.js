@@ -64,6 +64,12 @@ const UseCallbackOrMemo = ({ a = 1, b = 2 }) => {
         <button onClick={() => increment(memoizedValue)}>Increment 🍄</button>
         current count: {count}
       </p>
+      <p>
+        File:
+        <code>
+          src/components/patterns/CustomHooks/example/UseCallbackOrMemo.jsx
+        </code>
+      </p>
     </React.Fragment>
   );
 };

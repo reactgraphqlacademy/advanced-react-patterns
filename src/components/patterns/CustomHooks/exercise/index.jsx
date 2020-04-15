@@ -24,7 +24,7 @@ const Bonus = () => {
 
       <p>
         <input type="checkbox" /> 1. Refactor the{" "}
-        <code>src/components/patterns/CustomHooks/exercise/useWidth.jsx</code>{" "}
+        <code>src/components/patterns/CustomHooks/exercise/useWidth.js</code>{" "}
         class to a function component using the <code>useState</code> and{" "}
         <code>useEffect</code> Hooks.
       </p>
@@ -83,8 +83,7 @@ const Bonus = () => {
 
       <h4>🤸‍♀️Bonus exercise, legacy</h4>
       <p>
-        <input type="checkbox" /> Bonus 1. Replace the HoC{" "}
-        <code>withWidth</code> in
+        <input type="checkbox" /> Replace the HoC <code>withWidth</code> in
         <code>
           src/components/patterns/CompoundComponents/exercise/Menu.jsx
         </code>{" "}
@@ -92,12 +91,12 @@ const Bonus = () => {
       </p>
 
       <p>
-        <input type="checkbox" /> Bonus 2. We want to replace the HoC{" "}
+        <input type="checkbox" /> We want to replace the HoC{" "}
         <code>withWidth</code> in
         <code>src/components/App.jsx</code> with your custom hook but we don't
-        have much time and confidence (ohh no tests!). Create a HoC that uses
-        the useWidth hook and injects the width value via props to the App
-        component.
+        have much time and confidence (ohh we don't have tests!). Create a HoC
+        that uses the useWidth hook and injects the width value via props to the
+        App component.
       </p>
     </React.Fragment>
   );

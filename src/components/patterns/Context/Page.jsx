@@ -5,30 +5,24 @@ import Exercise from "./exercise";
 const Page = () => (
   <div>
     <h2>Context</h2>
-    <h3>Example</h3>
-    <p>
+    <blockquote>
+      Accepts a context object (the value returned from React.createContext) and
+      returns the current context value for that context. The current context
+      value is determined by the value prop of the nearest
+      &lt;MyContext.Provider&gt; above the calling component in the tree.{" "}
       <a
         target="_blank"
-        rel="noopener noreferrer"
-        href="https://github.com/reactjsacademy/advanced-react-patterns/tree/master/src/components/patterns/Context/example"
+        href="https://reactjs.org/docs/hooks-reference.html#usecontext"
       >
-        source code exercise branch &#187;
+        React docs
       </a>
-    </p>
+    </blockquote>
+    <h3>Example</h3>
     <Example />
     <p>
-      <em>Folder: src/components/patterns/Context/example/Modal.jsx</em>
+      File: <code>src/components/patterns/Context/example/Modal.jsx</code>
     </p>
     <h3>Exercise</h3>
-    <p>
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://github.com/reactjsacademy/advanced-react-patterns/tree/master/src/components/patterns/Context/exercise"
-      >
-        source code exercise branch &#187;
-      </a>
-    </p>
     <p>
       We are going to create a <strong>Theme Switcher</strong> component using
       Context. If you see{" "}
@@ -60,15 +54,6 @@ const Page = () => (
     <Exercise />
     <hr />
     <h3>Bonus Exercise</h3>
-    <p>
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://github.com/reactjsacademy/advanced-react-patterns/tree/master/src/components/patterns/Context/xbonus"
-      >
-        source code exercise branch &#187;
-      </a>
-    </p>
     <p>
       Implement the Redux Provider in
       <code>src/components/patterns/Context/xbonus/Provider.js</code>. Once

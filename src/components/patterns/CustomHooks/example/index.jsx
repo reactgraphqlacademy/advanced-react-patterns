@@ -57,6 +57,9 @@ const Example = () => (
       </a>
     </p>
     <ExampleComponent initialValue={5} />
+    <p>
+      File:<code> src/components/patterns/CustomHooks/example/index.jsx</code>
+    </p>
     <hr />
     <UseCallbackOrMemo />
   </React.Fragment>

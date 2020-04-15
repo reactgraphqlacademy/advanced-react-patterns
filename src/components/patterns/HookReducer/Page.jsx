@@ -29,6 +29,10 @@ const Page = () => (
     <h3>Example</h3>
     <p>Basic login form</p>
     <Example />
+    <br />
+    <p>
+      File:<code> src/components/patterns/HookReducer/example/index.jsx</code>
+    </p>
     <hr />
     <h3>🥑 Before the exercise 🏋️‍♀️</h3>
     <p>
