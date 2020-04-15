@@ -1,10 +1,10 @@
 import React from "react";
-import styled, { ThemeProvider, css } from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import theme from "./theme";
-import { variant } from 'styled-system'
+import { variant } from "styled-system";
 
 const buttonStyle = variant({
-  key: "buttons"
+  key: "buttons",
 });
 
 const Button = styled("button")`
@@ -19,12 +19,12 @@ const Button = styled("button")`
 `;
 
 Button.defaultProps = {
-  variant: "primary"
-}
+  variant: "primary",
+};
 
 const Wrapper = styled("div")`
   padding: 40px;
-  background: ${props => props.theme.colors.background};
+  background: ${(props) => props.theme.colors.background};
 `;
 
 const VariantsExample = () => (

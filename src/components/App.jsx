@@ -52,7 +52,11 @@ class App extends React.Component {
         <div id="page-wrap">
           <Menu isOpen={isMenuOpen} toggleMenu={this.toggleMenu}>
             <p className="text-center">
-              <a target="_blank" href="https://reactgraphql.academy">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://reactgraphql.academy"
+              >
                 <RGALogo />
               </a>
             </p>

@@ -1,10 +1,10 @@
 import React from "react";
 import withMousePosition from "./example/withMousePosition";
 import Exercise1 from "./exercise_1";
-import { connect } from "./exercise_bonus/connect";
+// import { connect } from "./exercise_bonus/connect";
 import {
   incrementAction,
-  decrementAction
+  decrementAction,
 } from "./exercise_bonus/utils/redux-counter";
 
 const Page = ({ dispatch, ...props }) => (
@@ -85,9 +85,7 @@ const Page = ({ dispatch, ...props }) => (
       </ul>
     </div>
     <hr />
-    <h3>
-      Exercise withWidth <a name="withdata" />
-    </h3>
+    <h3>Exercise withWidth</h3>
     <p>
       <a
         target="_blank"
@@ -178,14 +176,6 @@ const Page = ({ dispatch, ...props }) => (
     </p>
   </div>
 );
-
-const mapStateToProps = state => ({
-  counter: state
-});
-
-const mapDispatchToProps = dispatch => ({
-  dispatch
-});
 
 // Uncomment the following line for the HoCs bonus exercise
 // export default connect(mapStateToProps, mapDispatchToProps)(withMousePosition(Question1))

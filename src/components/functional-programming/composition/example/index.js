@@ -1,14 +1,16 @@
-export const compose = (...functions) => initialValue =>
+/* eslint-disable no-unused-vars */
+
+export const compose = (...functions) => (initialValue) =>
   functions.reduceRight(
     (accumulatedValue, fn) => fn(accumulatedValue),
     initialValue
   );
 
-const toUpperCase = text => text.toUpperCase();
+const toUpperCase = (text) => text.toUpperCase();
 
-const removeSpaces = text => text.replace(/\s/g, "");
+const removeSpaces = (text) => text.replace(/\s/g, "");
 
-const removeNumbers = text => text.replace(/[0-9]/g, "");
+const removeNumbers = (text) => text.replace(/[0-9]/g, "");
 
 // export const transformText = compose(
 //   toUpperCase,
@@ -16,4 +18,4 @@ const removeNumbers = text => text.replace(/[0-9]/g, "");
 //   removeSpaces
 // );
 
-export const transformText = text => text;
+export const transformText = (text) => text;

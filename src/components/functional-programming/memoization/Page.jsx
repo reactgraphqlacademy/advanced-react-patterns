@@ -22,11 +22,11 @@ const Page = () => (
     <p>
       1. Pair up and explain to each other how the memoize function works with
       the doEasyWork function.
-      <ul>
-        <li>Where is the closure? Between line X and Y</li>
-        <li>What variable/s are captured in the closure?</li>
-      </ul>
     </p>
+    <ul>
+      <li>Where is the closure? Between line X and Y</li>
+      <li>What variable/s are captured in the closure?</li>
+    </ul>
 
     <p>
       2. Explain to each other how the memoize function works with doHardWork.

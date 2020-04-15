@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/accessible-emoji */
 import React from "react";
 // import useWidth, { LARGE, MEDIUM } from "./useWidth";
 // remove the following import after refactoring the Width component to a custom hook
@@ -33,6 +34,7 @@ const Bonus = () => {
         <a
           href="https://reactjs.org/docs/hooks-effect.html#effects-with-cleanup"
           target="_blank"
+          rel="noopener noreferrer"
         >
           {" "}
           cleanup phase
@@ -67,6 +69,7 @@ const Bonus = () => {
         <a
           href="https://github.com/facebook/react/issues/14920"
           target="_blank"
+          rel="noopener noreferrer"
         >
           'exhaustive-deps' lint rule
         </a>

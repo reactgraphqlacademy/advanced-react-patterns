@@ -15,25 +15,25 @@ You should see on the console the console.log() for this exercise.
    You can use the function doAnyWork to test your refactored memoize function
 */
 
-async function doEasyWork(amount) {
+export async function doEasyWork(amount) {
   console.log(`[memoization exercise] ${amount} easy units produced`);
 }
 
-async function doHardWork(amount) {
+export async function doHardWork(amount) {
   console.log("[memoization exercise] doing work");
-  await new Promise(resolve => setTimeout(resolve, amount));
+  await new Promise((resolve) => setTimeout(resolve, amount));
   console.log(`[memoization exercise] ${amount} units of hard work produced!`);
 
   return amount;
 }
 
-function doAnyWork(amount = 1, amount2 = 1, amount3 = 1) {
+export function doAnyWork(amount = 1, amount2 = 1, amount3 = 1) {
   return amount + amount2 + amount3;
 }
 
 function memoize(fn) {
   let cache = {};
-  return amount => {
+  return (amount) => {
     if (amount in cache) {
       console.log("[memoization exercise] output from cache");
       return cache[amount];

@@ -21,7 +21,7 @@ class RandomImage extends React.Component {
   render() {
     const { imageUrl } = this.state;
 
-    return <img src={imageUrl} />;
+    return <img src={imageUrl} alt={imageUrl} />;
   }
 }
 

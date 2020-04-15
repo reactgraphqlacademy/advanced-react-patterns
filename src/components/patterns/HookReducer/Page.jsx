@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/accessible-emoji */
 import React from "react";
 import Example from "./example";
 import Exercise from "./exercise";
@@ -10,6 +11,7 @@ const Page = () => (
       <a
         href="https://reactjs.org/docs/hooks-reference.html#usereducer"
         target="_blank"
+        rel="noopener noreferrer"
       >
         React docs
       </a>
@@ -78,15 +80,13 @@ const Page = () => (
       <input type="checkbox" /> Create a custom hook from your Login Form. You
       can call it useForm.
     </p>
-    <p>
-      🕵️‍♀️ Hints :
-      <ul>
-        <li>Extract the useReducer outside the Login Form</li>
-        <li>
-          Don't think of state only, but also functions that create "props".
-        </li>
-      </ul>
-    </p>
+    <p>🕵️‍♀️ Hints :</p>
+    <ul>
+      <li>Extract the useReducer outside the Login Form</li>
+      <li>
+        Don't think of state only, but also functions that create "props".
+      </li>
+    </ul>
   </React.Fragment>
 );
 

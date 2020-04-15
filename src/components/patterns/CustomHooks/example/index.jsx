@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/accessible-emoji */
 import React, { useState } from "react";
 import UseCallbackOrMemo from "./UseCallbackOrMemo";
 
@@ -52,7 +53,11 @@ const Example = () => (
 
     <p>
       Custom Hooks documentation{" "}
-      <a href="https://reactjs.org/docs/hooks-custom.html" target="_blank">
+      <a
+        href="https://reactjs.org/docs/hooks-custom.html"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
         https://reactjs.org/docs/hooks-custom.html
       </a>
     </p>

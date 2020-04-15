@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 // Open the console on your browser and type [closure exercise] in the console filter.
 // You should see on the console the console.log() for this exercise.
 

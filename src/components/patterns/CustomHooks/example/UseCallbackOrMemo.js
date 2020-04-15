@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/accessible-emoji */
 import React, { useMemo, useCallback, useEffect } from "react";
 import { useIncrement } from "./index";
 
@@ -37,6 +38,7 @@ const UseCallbackOrMemo = ({ a = 1, b = 2 }) => {
         <a
           href="https://reactjs.org/docs/hooks-reference.html#usememo"
           target="_blank"
+          rel="noopener noreferrer"
         >
           {` `} The docs
         </a>
@@ -47,6 +49,7 @@ const UseCallbackOrMemo = ({ a = 1, b = 2 }) => {
         <a
           href="https://reactjs.org/docs/hooks-reference.html#usecallback"
           target="_blank"
+          rel="noopener noreferrer"
         >
           {` `} The docs
         </a>
