@@ -88,8 +88,14 @@ const Root = () => {
       </blockquote>
       <p>🤔 React docs say "use two different context types". Let's do it!</p>
       <p>
-        Task: create two different context types for our StoreContext. One
-        context for the dispatch, and another context for the state.
+        <input type="checkbox" /> 2.1. Create two different context types for
+        our StoreContext. One context for the dispatch, and another context for
+        the state.
+      </p>
+      <p>
+        <input type="checkbox" /> 2.2. Great! We've implemented task 2.1. but,
+        wait 🤔... does it make any difference in our use case? Why? Discuss
+        with your peers.
       </p>
     </div>
   );
