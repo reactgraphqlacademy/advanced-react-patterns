@@ -22,6 +22,22 @@ const Page = () => (
     <Example />
     <hr />
     <Exercise />
+    <h3>Bonus Exercise</h3>
+    <p>
+      <input type="checkbox" />
+      b.1. In{" "}
+      <code>
+        src/components/patterns/Context/exercise/GraphQLProvider.jsx
+      </code>{" "}
+      we are using <code>const memoizedHashGql = memoize(hashGql);</code>.
+      Should we use useMemo instead? Why?
+    </p>
+    <p>
+      <input type="checkbox" />
+      b.2. In our current implementation, although there is a cache (data key in
+      our reducer) for each pair query & variables, we can only send 1 query at
+      a time. How would you make it possible to send requests concurrently?
+    </p>
   </React.Fragment>
 );
 
