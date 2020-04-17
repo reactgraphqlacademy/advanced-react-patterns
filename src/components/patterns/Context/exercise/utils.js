@@ -1,6 +1,8 @@
 export function hashGql(query, variables) {
   const body = JSON.stringify({ query, variables });
 
+  console.log("hashGql: no hit from the cache");
+
   return body.split("").reduce(function (a, b) {
     a = (a << 5) - a + b.charCodeAt(0);
     return a & a;

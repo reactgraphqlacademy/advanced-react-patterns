@@ -2,6 +2,7 @@
 import React from "react";
 import { useQuery } from "./GraphQLProvider";
 
+const variables = { id: 2 };
 const Root = () => {
   const { data, loading, error } = useQuery(
     `query character($id: ID! = 1) {
@@ -10,7 +11,7 @@ const Root = () => {
           name
         }
       }`,
-    { variables: { id: 2 } }
+    { variables }
   );
   if (loading) {
     return "loading";

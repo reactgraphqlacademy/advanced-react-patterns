@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Redirect } from "react-router-dom";
 
 import Root from "./Root";
-import useWidth, { LARGE } from "./patterns/CustomHooks/exercise/useWidth";
+import { withWidth, LARGE } from "./patterns/CustomHooks/exercise/useWidth";
 import HigherOrderComponentsPage from "./patterns/HigherOrderComponents/Page";
 import RenderPropsPage from "./patterns/RenderProps/Page";
 import CompoundComponentsPage from "./patterns/CompoundComponents/Page";
@@ -18,6 +18,7 @@ import ThemingPage from "./patterns/Theming/Page";
 import VariantsPage from "./patterns/Variants/Page";
 import HooksPage from "./patterns/Hooks/Page";
 import RGALogo from "./RGALogo";
+import { compose } from "./functional-programming/composition/exercise";
 
 class App extends React.Component {
   constructor() {
@@ -141,10 +142,4 @@ class App extends React.Component {
   }
 }
 
-const withWidth = (Component) => (props) => {
-  const width = useWidth();
-
-  return <Component {...props} width={width} />;
-};
-
-export default withWidth(App);
+export default compose(withWidth)(App);

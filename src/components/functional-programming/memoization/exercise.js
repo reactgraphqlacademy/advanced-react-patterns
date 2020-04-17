@@ -31,25 +31,31 @@ export function doAnyWork(amount = 1, amount2 = 1, amount3 = 1) {
   return amount + amount2 + amount3;
 }
 
-function memoize(fn) {
+const resolverFn = (args) => args.join(",");
+
+function memoize(fn, resolver = resolverFn) {
   let cache = {};
-  return (amount) => {
-    if (amount in cache) {
+  return (...args) => {
+    const key = resolver(args);
+
+    if (key in cache) {
       console.log("[memoization exercise] output from cache");
-      return cache[amount];
+      return cache[key];
     } else {
-      let result = fn(amount);
-      cache[amount] = result;
+      let result = fn(...args);
+      cache[key] = result;
       return result;
     }
   };
 }
 
-const memoizedDoWork = memoize(doEasyWork);
-memoizedDoWork(4000);
-memoizedDoWork(4000);
+// const memoizedDoWork = memoize(doHardWork);
+// memoizedDoWork(4000);
+// memoizedDoWork(4000);
 
 // Bounus
-// const memoizedDoWork = memoize(doAnyWork);
-// console.log(`[memoization exercise] ${memoizedDoWork(1, 2, 3)} === 6 ?`);
-// console.log(`[memoization exercise] ${memoizedDoWork(1, 50, 104)} === 155 ?`);
+const memoizedDoWork = memoize(doAnyWork);
+console.log(`[memoization exercise] ${memoizedDoWork(1, 2, 3)} === 6 ?`);
+console.log(`[memoization exercise] ${memoizedDoWork(1, 50, 104)} === 155 ?`);
+
+// Bonus 2, extract the key cache functionality to a "resolver" function

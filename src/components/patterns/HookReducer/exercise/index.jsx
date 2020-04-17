@@ -1,10 +1,12 @@
-/* eslint-disable no-unused-vars */
 import React from "react";
 
 function reducer(state, action) {
   switch (action.type) {
-    // 🚧 Add a SET_ERRORS case that adds an errors key to the state with the action.payload
-    // 🕵️‍♀️ You probably want to clear previous errors every time you do SET_ERRORS
+    case "SET_ERRORS":
+      return {
+        ...state,
+        errors: action.payload,
+      };
     case "SET_FIELD_VALUE":
       return {
         ...state,
@@ -18,31 +20,18 @@ function reducer(state, action) {
   }
 }
 
-function LoginForm(props) {
-  const { initialValues, onSubmit } = props;
-  // 👮‍♀you don't have to edit this validate function
-  const validate = (values) => {
-    let errors = {};
-    if (!values.password) {
-      errors.password = "Password is required";
-    }
-    if (!values.userId) {
-      errors.userId = "User Id is required";
-    }
-    return errors;
-  };
-
+function useForm(props) {
   const [state, dispatch] = React.useReducer(reducer, {
-    values: initialValues,
+    values: props.initialValues,
     errors: {},
   });
 
   React.useEffect(() => {
-    if (validate) {
-      const errors = validate(state.values);
-      // 🚧 dispatch a SET_ERRORS action with the errors as payload
+    if (props.validate) {
+      const errors = props.validate(state.values);
+      dispatch({ type: "SET_ERRORS", payload: errors });
     }
-  }, []); // 🚧 dispatch the SET_ERRORS action only when the state of the input fields change.
+  }, [state.values]);
 
   const handleChange = (fieldName) => (event) => {
     event.preventDefault();
@@ -54,9 +43,9 @@ function LoginForm(props) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const errors = validate(state.values);
+    const errors = props.validate(state.values);
     if (!Object.keys(errors).length) {
-      onSubmit(state.values);
+      props.onSubmit(state.values);
     }
   };
 
@@ -65,15 +54,36 @@ function LoginForm(props) {
     onChange: handleChange(fieldName),
   });
 
-  const { errors } = state;
+  return { handleChange, handleSubmit, getFieldProps, errors: state.errors };
+}
+
+function LoginForm(props) {
+  const form = useForm({
+    initialValues: props.initialValues,
+    onSubmit: async (values) => {
+      alert(JSON.stringify(values, null, 2));
+    },
+    validate: (values) => {
+      let errors = {};
+      if (!values.password) {
+        errors.password = "Password is required";
+      }
+      if (!values.email) {
+        errors.email = "Email is required";
+      }
+      return errors;
+    },
+  });
+
+  const { handleSubmit, getFieldProps, errors = {} } = form;
 
   return (
     <form onSubmit={handleSubmit}>
       <label>
-        User Id:
+        Email:
         <br />
-        <input type="text" {...getFieldProps("userId")} />
-        {errors.userId && <div style={{ color: "red" }}>{errors.userId}</div>}
+        <input type="text" {...getFieldProps("email")} />
+        {errors.email && <div style={{ color: "red" }}>{errors.email}</div>}
       </label>
       <br />
       <label>
@@ -96,10 +106,7 @@ const Exercise = () => (
     <LoginForm
       initialValues={{
         password: "",
-        userId: "",
-      }}
-      onSubmit={(values) => {
-        alert(JSON.stringify(values, null, 2));
+        email: "",
       }}
     />
   </React.Fragment>

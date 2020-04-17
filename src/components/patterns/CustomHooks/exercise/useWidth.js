@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 
 export const SMALL = 1;
 export const MEDIUM = 2;
@@ -26,26 +26,28 @@ const windowWidth = () => {
 const useWidth = () => {
   const [width, setWidth] = useState(null);
 
-  const handleResize = () => {
-    let currentWidth = windowWidth();
-    if (currentWidth !== width) {
-      setWidth(currentWidth);
-    }
-  };
-
-  const handleResizeCallback = useCallback(handleResize, []);
-
   useEffect(() => {
+    const handleResize = () => {
+      let currentWidth = windowWidth();
+      setWidth(currentWidth);
+    };
+
     if (window) {
-      window.addEventListener("resize", handleResizeCallback);
-      handleResizeCallback();
+      window.addEventListener("resize", handleResize);
+      handleResize();
     }
     return () => {
-      if (window) window.removeEventListener("resize", handleResizeCallback);
+      if (window) window.removeEventListener("resize", handleResize);
     };
-  }, [handleResizeCallback]);
+  }, []);
 
   return width;
+};
+
+export const withWidth = (Component) => (props) => {
+  const width = useWidth();
+
+  return <Component {...props} width={width} />;
 };
 
 export default useWidth;

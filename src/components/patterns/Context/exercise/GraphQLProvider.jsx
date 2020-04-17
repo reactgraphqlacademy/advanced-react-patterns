@@ -38,6 +38,7 @@ export const GraphQLProvider = ({
 
   return (
     <ClientContext.Provider value={{ client }}>
+      {/* Anwser to task 2: It doesn't make sense in this case to split it in the following two contexts */}
       <DispatchGQLContext.Provider value={{ dispatch }}>
         <CacheContext.Provider value={{ state }}>
           {children}
@@ -47,7 +48,6 @@ export const GraphQLProvider = ({
   );
 };
 
-// 🚧 Should we use useMemo for this memoized function? Why?
 const memoizedHashGql = memoize(hashGql);
 
 export const useQuery = (query, { variables }) => {
@@ -59,7 +59,7 @@ export const useQuery = (query, { variables }) => {
   const data = cache && cache[cacheKey];
 
   useEffect(() => {
-    if (data) {
+    if (data || error) {
       return;
     }
 
@@ -77,7 +77,7 @@ export const useQuery = (query, { variables }) => {
           error,
         })
       );
-  }, [query, cacheKey, variables, dispatch, data]); // do I need dispatch here if it comes from useReducer?
+  }, [query, cacheKey, variables, dispatch, data]);
 
   return { data, loading, error };
 };
