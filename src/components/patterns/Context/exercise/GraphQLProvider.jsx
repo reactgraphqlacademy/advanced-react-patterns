@@ -4,10 +4,9 @@ import { memoize, hashGql } from "./utils";
 const RECEIVE_DATA = "RECEIVE_DATA";
 const SET_ERROR = "SET_ERROR";
 
-export const StoreContext = React.createContext();
-export const CacheContext = React.createContext();
-export const DispatchGQLContext = React.createContext();
-export const ClientContext = React.createContext();
+const CacheContext = React.createContext();
+const DispatchGQLContext = React.createContext();
+const ClientContext = React.createContext();
 
 const reducer = (state, action) => {
   switch (action.type) {
