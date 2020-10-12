@@ -46,7 +46,7 @@ const Page = () => (
       know.
     </p>
 
-    <h3>Exercise</h3>
+    <h3>Exercise part 1</h3>
 
     <h4>
       🎯 The goal is to understand how to handle complex state logic in our
@@ -75,7 +75,7 @@ const Page = () => (
 
     <Exercise />
     <hr />
-    <h3>Bonus exercise</h3>
+    <h3>Exercise part 2</h3>
     <p>
       <input type="checkbox" /> Create a custom hook from your Login Form. You
       can call it useForm.
@@ -87,6 +87,8 @@ const Page = () => (
         Don't think of state only, but also functions that create "props".
       </li>
     </ul>
+
+    <h3>Bonus exercise</h3>
   </React.Fragment>
 );
 
