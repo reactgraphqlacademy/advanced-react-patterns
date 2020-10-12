@@ -88,7 +88,51 @@ const Page = () => (
       </li>
     </ul>
 
-    <h3>Bonus exercise</h3>
+    <h3>Exercise part 3</h3>
+    <p>
+      By default we are displaying the error message to the user even if the
+      user did not use the form. That's not a great user experience. To improve
+      that we are going to add another state in our form to identify which
+      fields are `dirty`.
+    </p>
+    <p>
+      A field is dirty when the value of the field is not equal to the initial
+      value, false if the values are equal.
+    </p>
+
+    <h3>Bonus exercise part 1</h3>
+    <p>
+      We are going to add some state to our form to know when the form is being
+      submitted.
+    </p>
+    <p>
+      If the form is being submitted then we'll display the text "submitting"
+      instead of "submit" in the submit button.
+    </p>
+
+    <h3>Bonus exercise part 2</h3>
+    <p>
+      Use the{" "}
+      <a
+        href="https://reactjs.org/blog/2018/09/10/introducing-the-react-profiler.htm"
+        target="_blank"
+      >
+        React Profiler
+      </a>{" "}
+      in the React Dev Tools to record what happens when you type in the user
+      id. Is the password being rendered as well? Why?
+    </p>
+    <p>
+      To avoid unnecessary renders you can create another component called
+      "Field" and use{" "}
+      <a
+        href="https://reactjs.org/docs/react-api.html#reactmemo"
+        target="_blank"
+      >
+        React.memo
+      </a>
+      .
+    </p>
   </React.Fragment>
 );
 

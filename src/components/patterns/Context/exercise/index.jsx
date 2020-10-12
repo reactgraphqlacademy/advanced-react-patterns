@@ -64,7 +64,7 @@ const Root = () => {
         your useQuery. You can create a handy useClient custom hook like we did
         in the example{" "}
         <code>
-          src/components/patterns/Context/example/modal.jsx -> useModal function{" "}
+          src/components/patterns/Context/example/modal.jsx : useModal function{" "}
         </code>
       </p>
 
@@ -96,6 +96,15 @@ const Root = () => {
         <input type="checkbox" /> 2.2. Great! We've implemented task 2.1. but,
         wait 🤔... does it make any difference in our use case? Why? Discuss
         with your peers.
+      </p>
+      <h4>Tasks part 3:</h4>
+      <p>
+        <input type="checkbox" /> 3. In{" "}
+        <code>
+          src/components/patterns/Context/exercise/GraphQLProvider.jsx
+        </code>{" "}
+        we are using <code>const memoizedHashGql = memoize(hashGql);</code>.
+        Should we use useMemo instead? Why?
       </p>
     </div>
   );
