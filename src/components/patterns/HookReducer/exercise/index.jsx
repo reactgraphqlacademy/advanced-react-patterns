@@ -14,17 +14,38 @@ function reducer(state, action) {
           ...state.values,
           ...action.payload,
         },
+        dirtyFields: {
+          ...state.dirtyFields,
+          ...getDirtyFields(action.payload, state.initialValues),
+        },
       };
     default:
       return state;
   }
 }
 
-function useForm(props) {
-  const [state, dispatch] = React.useReducer(reducer, {
-    values: props.initialValues,
+function getDirtyFields(values = {}, initialValues = {}) {
+  return Object.keys(values).reduce((acc, key) => {
+    acc[key] = values[key] != initialValues[key];
+
+    return acc;
+  }, {});
+}
+
+function getInitialState(initialValues = {}) {
+  return {
+    values: initialValues,
+    initialValues,
+    dirtyFields: getDirtyFields(initialValues),
     errors: {},
-  });
+  };
+}
+
+function useForm(props) {
+  const [state, dispatch] = React.useReducer(
+    reducer,
+    getInitialState(props.values)
+  );
 
   React.useEffect(() => {
     if (props.validate) {
