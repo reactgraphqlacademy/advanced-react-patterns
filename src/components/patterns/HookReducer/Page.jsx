@@ -92,13 +92,15 @@ const Page = () => (
     <p>
       By default we are displaying the error message to the user even if the
       user did not use the form. That's not a great user experience. To improve
-      that we are going to add another state in our form to identify which
-      fields are `dirty`.
+      that we are going to add two more states in our form to identify which
+      fields are `dirty` and if the form is `submitted`.
     </p>
     <p>
       A field is dirty when the value of the field is not equal to the initial
       value, false if the values are equal.
     </p>
+
+    <p>A field is submitted if the form is submitted :D</p>
 
     <h3>Bonus exercise part 1</h3>
     <p>
