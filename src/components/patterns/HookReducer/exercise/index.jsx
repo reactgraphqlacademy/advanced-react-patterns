@@ -26,7 +26,7 @@ function reducer(state, action) {
 
 function getDirtyFields(values = {}, initialValues = {}) {
   return Object.keys(values).reduce((acc, key) => {
-    acc[key] = values[key] != initialValues[key];
+    acc[key] = values[key] !== (initialValues[key] || "");
 
     return acc;
   }, {});
@@ -75,7 +75,13 @@ function useForm(props) {
     onChange: handleChange(fieldName),
   });
 
-  return { handleChange, handleSubmit, getFieldProps, errors: state.errors };
+  return {
+    handleChange,
+    handleSubmit,
+    getFieldProps,
+    errors: state.errors,
+    dirtyFields: state.dirtyFields,
+  };
 }
 
 function LoginForm(props) {
@@ -96,7 +102,7 @@ function LoginForm(props) {
     },
   });
 
-  const { handleSubmit, getFieldProps, errors = {} } = form;
+  const { handleSubmit, getFieldProps, errors = {}, dirtyFields } = form;
 
   return (
     <form onSubmit={handleSubmit}>
@@ -104,14 +110,16 @@ function LoginForm(props) {
         Email:
         <br />
         <input type="text" {...getFieldProps("email")} />
-        {errors.email && <div style={{ color: "red" }}>{errors.email}</div>}
+        {dirtyFields.email && errors.email && (
+          <div style={{ color: "red" }}>{errors.email}</div>
+        )}
       </label>
       <br />
       <label>
         Password:
         <br />
         <input type="text" {...getFieldProps("password")} />
-        {errors.password && (
+        {dirtyFields.password && errors.password && (
           <div style={{ color: "red" }}>{errors.password}</div>
         )}
       </label>
