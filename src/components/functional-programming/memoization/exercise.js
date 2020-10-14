@@ -33,7 +33,7 @@ export function doAnyWork(amount = 1, amount2 = 1, amount3 = 1) {
 
 const resolverFn = (args) => args.join(",");
 
-function memoize(fn, resolver = resolverFn) {
+export function memoize(fn, resolver = resolverFn) {
   let cache = {};
   return (...args) => {
     const key = resolver(args);

@@ -14,38 +14,36 @@ function reducer(state, action) {
           ...state.values,
           ...action.payload,
         },
-        dirtyFields: {
-          ...state.dirtyFields,
-          ...getDirtyFields(action.payload, state.initialValues),
+        touched: {
+          ...state.touched,
+          ...getTouchedFields(action.payload, true),
         },
+      };
+    case "SUBMITTING_FORM":
+      return {
+        ...state,
+        submitting: action.payload,
       };
     default:
       return state;
   }
 }
 
-function getDirtyFields(values = {}, initialValues = {}) {
+function getTouchedFields(values = {}, touched = false) {
   return Object.keys(values).reduce((acc, key) => {
-    acc[key] = values[key] !== (initialValues[key] || "");
+    acc[key] = touched;
 
     return acc;
   }, {});
 }
 
-function getInitialState(initialValues = {}) {
-  return {
-    values: initialValues,
-    initialValues,
-    dirtyFields: getDirtyFields(initialValues),
-    errors: {},
-  };
-}
-
 function useForm(props) {
-  const [state, dispatch] = React.useReducer(
-    reducer,
-    getInitialState(props.values)
-  );
+  const [state, dispatch] = React.useReducer(reducer, {
+    values: props.initialValues,
+    touched: getTouchedFields(props.initialValues),
+    errors: {},
+    submitting: false,
+  });
 
   React.useEffect(() => {
     if (props.validate) {
@@ -62,17 +60,22 @@ function useForm(props) {
     });
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const errors = props.validate(state.values);
     if (!Object.keys(errors).length) {
-      props.onSubmit(state.values);
+      dispatch({ type: "SUBMITTING_FORM", payload: true });
+      // adding await in case onSubmit returns a promise, which is most likely in a real-world scenario
+      await props.onSubmit(state.values);
+      dispatch({ type: "SUBMITTING_FORM", payload: false });
     }
   };
 
+  // useMemo wouldn't work here to keep the identity of the returned props because we need to memoize based on state.values[fieldName] and the fieldName is not known ahead of time
   const getFieldProps = (fieldName) => ({
     value: state.values[fieldName],
     onChange: handleChange(fieldName),
+    meta: { error: state.errors[fieldName], touched: state.touched[fieldName] },
   });
 
   return {
@@ -80,14 +83,32 @@ function useForm(props) {
     handleSubmit,
     getFieldProps,
     errors: state.errors,
-    dirtyFields: state.dirtyFields,
+    touched: state.touched,
+    submitting: state.submitting,
   };
 }
+
+// React.memo doesn't work here because the function getFieldProps generates a new reference for the props object
+const Field = React.memo(({ component: Component, ...rest }) => (
+  <Component {...rest} />
+));
+
+const Input = ({ meta, label, ...rest }) => (
+  <label>
+    {label}:
+    <br />
+    <input {...rest} />
+    {meta.touched && meta.error && (
+      <div style={{ color: "red" }}>{meta.error}</div>
+    )}
+  </label>
+);
 
 function LoginForm(props) {
   const form = useForm({
     initialValues: props.initialValues,
     onSubmit: async (values) => {
+      await new Promise((resolve) => setTimeout(resolve, 1000));
       alert(JSON.stringify(values, null, 2));
     },
     validate: (values) => {
@@ -95,36 +116,32 @@ function LoginForm(props) {
       if (!values.password) {
         errors.password = "Password is required";
       }
-      if (!values.email) {
-        errors.email = "Email is required";
+      if (!values.userId) {
+        errors.userId = "UserId is required";
       }
       return errors;
     },
   });
 
-  const { handleSubmit, getFieldProps, errors = {}, dirtyFields } = form;
+  const { handleSubmit, getFieldProps, submitting } = form;
 
   return (
     <form onSubmit={handleSubmit}>
-      <label>
-        Email:
-        <br />
-        <input type="text" {...getFieldProps("email")} />
-        {dirtyFields.email && errors.email && (
-          <div style={{ color: "red" }}>{errors.email}</div>
-        )}
-      </label>
+      <Field
+        component={Input}
+        type="text"
+        label="Type your userId"
+        {...getFieldProps("userId")}
+      />
       <br />
-      <label>
-        Password:
-        <br />
-        <input type="text" {...getFieldProps("password")} />
-        {dirtyFields.password && errors.password && (
-          <div style={{ color: "red" }}>{errors.password}</div>
-        )}
-      </label>
+      <Field
+        component={Input}
+        type="password"
+        label="Type your password"
+        {...getFieldProps("password")}
+      />
       <br />
-      <button type="submit">Submit</button>
+      <button type="submit">{submitting ? "Submitting" : "Submit"}</button>
     </form>
   );
 }
@@ -135,7 +152,7 @@ const Exercise = () => (
     <LoginForm
       initialValues={{
         password: "",
-        email: "",
+        userId: "",
       }}
     />
   </React.Fragment>
