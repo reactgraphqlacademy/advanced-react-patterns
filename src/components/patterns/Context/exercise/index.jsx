@@ -2,7 +2,6 @@
 import React from "react";
 import { useQuery } from "./GraphQLProvider";
 
-const variables = { id: 2 };
 const Root = () => {
   const { data, loading, error } = useQuery(
     `query character($id: ID! = 1) {
@@ -11,7 +10,7 @@ const Root = () => {
           name
         }
       }`,
-    { variables }
+    { variables: { id: 2 } }
   );
   if (loading) {
     return "loading";
@@ -65,10 +64,9 @@ const Root = () => {
         your useQuery. You can create a handy useClient custom hook like we did
         in the example{" "}
         <code>
-          src/components/patterns/Context/example/modal.jsx -> useModal function{" "}
+          src/components/patterns/Context/example/modal.jsx : useModal function{" "}
         </code>
       </p>
-
       <h4>Tasks part 2:</h4>
       <blockquote>
         In large component trees, an alternative we recommend is to pass down a
@@ -89,9 +87,41 @@ const Root = () => {
       </blockquote>
       <p>🤔 React docs say "use two different context types". Let's do it!</p>
       <p>
-        Task: create two different context types for our StoreContext. One
-        context for the dispatch, and another context for the state.
+        <input type="checkbox" /> 2.1. Create two different context types for
+        our StoreContext. One context for the dispatch, and another context for
+        the state.
       </p>
+      <p>
+        <input type="checkbox" /> 2.2. Great! We've implemented task 2.1. but,
+        wait 🤔... does it make any difference in our use case? Why? Discuss
+        with your peers.
+      </p>
+      <p>
+        It doesn't make sense in our case because we are using both dispatch and
+        the state from the reducer in the same hook. It would make sense if we
+        had two different hooks used in separately in different components in
+        the app.
+      </p>
+      <h4>Tasks part 3:</h4>
+      <p>
+        <input type="checkbox" /> 3. In{" "}
+        <code>
+          src/components/patterns/Context/exercise/GraphQLProvider.jsx
+        </code>{" "}
+        we are using <code>const memoizedHashGql = memoize(hashGql);</code>.
+        Should we use useMemo instead? Why?
+      </p>
+      <p>Answer: React.useMemo would't work for two reasons:</p>
+      <ol>
+        <li>
+          When the component unmounts it's not guaranteed the cache will be
+          preserved.
+        </li>
+        <li>
+          React.useMemo will only cache the last value, it doesn't keep a record
+          of all the queries and variables we might run.
+        </li>
+      </ol>
     </div>
   );
 };

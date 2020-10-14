@@ -133,6 +133,10 @@ const Page = () => (
       </a>
       .
     </p>
+    <p>
+      Answer: React.memo doesn't work here because the function getFieldProps
+      generates a new reference for the props object in every render.
+    </p>
   </React.Fragment>
 );
 
